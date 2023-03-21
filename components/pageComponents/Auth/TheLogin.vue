@@ -72,6 +72,9 @@ export default {
           confirmButtonColor: "red",
         });
       } else {
+        localStorage.setItem("username", JSON.stringify(this.username));
+        localStorage.setItem("email", JSON.stringify(this.email));
+        localStorage.setItem("password", JSON.stringify(this.password));
         this.$store.dispatch("login/setItems", {
           email: this.email,
           password: this.password,

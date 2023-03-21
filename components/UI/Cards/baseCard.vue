@@ -22,7 +22,7 @@ export default {
   margin: 64px;
   color: var(--white);
   box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 2px;
+  border-radius: 4px;
 
 }
 </style>

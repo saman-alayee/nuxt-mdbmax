@@ -1,20 +1,22 @@
 <template>
   <div class="row mt-4">
     <div class="stepper-wrapper mt-4 w-100">
-  <div class="stepper-item completed">
-    <div class="step-counter">1</div>
-    <div class="step-name">Subscription plan</div>
-  </div>
-  <div class="stepper-item completed">
-    <div class="step-counter " style="background-color:var(--white); color:var(--black)">2</div>
-    <div class="step-name">Subscription duration</div>
-  </div>
- 
-</div>
-    <div class="col-md-12 col-sm-12">
+      <div class="stepper-item completed">
+        <div class="step-counter">1</div>
+        <div class="step-name">{{ $t('stepOne') }}</div>
+      </div>
+      <div class="stepper-item completed">
+        <div
+          class="step-counter"
+          style="background-color: var(--white); color: var(--black)"
+        >
+          2
+        </div>
+        <div class="step-name">{{ $t('stepTwo') }}</div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12" v-for="card in cards" :key="card.title">
       <priceCard
-        v-for="card in cards"
-        :key="card.title"
         :title="card.title"
         :price="card.price"
         :feature_one="card.feature_one"
@@ -23,7 +25,7 @@
         :feature_four="card.feature_four"
         :feature_five="card.feature_five"
         :feature_six="card.feature_six"
-        :border-top=card.boderTop
+        :border-top="card.boderTop"
         :link="card.link"
       />
     </div>
@@ -31,7 +33,6 @@
 </template>
 
 <script>
-
 import priceCard from "../../UI/Cards/priceCard.vue";
 export default {
   name: "TheHome",
@@ -42,15 +43,16 @@ export default {
     return {
       cards: [
         {
-          title: "Basic Trial",
+          title: "$t('login')",
           price: "$2.00 / day",
           feature_one: "Access to Full One Day",
           feature_two: "Cancel Anytime",
           feature_three: "Unlimited movies and TV shows",
           feature_four: "Resoulution Access HD (720)",
           feature_five: "",
-          boderTop:false,
-          link:'basicPlan'
+          feature_six: "",
+          boderTop: false,
+          link: "basicPlan",
         },
         {
           title: "Permium",
@@ -60,9 +62,9 @@ export default {
           feature_three: "Unlimited movies and TV shows",
           feature_four: "Resoulution Access HD (720)",
           feature_five: "No AD",
-          feature_six:"",
-          boderTop:true,
-          link:'permiumPlan'
+          feature_six: "",
+          boderTop: true,
+          link: "permiumPlan",
         },
         {
           title: "Business",
@@ -72,9 +74,9 @@ export default {
           feature_three: "Unlimited movies and TV shows",
           feature_four: "Resoulution Access HD (4k+HDR)",
           feature_five: "No AD",
-          feature_six:"Priority Support in 24H",
-          boderTop:false,
-          link:'businessPlan'
+          feature_six: "Priority Support in 24H",
+          boderTop: false,
+          link: "businessPlan",
         },
       ],
     };
@@ -169,7 +171,7 @@ export default {
   content: none;
 }
 .step-name {
-  color:var(--white)
+  color: var(--white);
 }
 .stepper-item:last-child::after {
   content: none;

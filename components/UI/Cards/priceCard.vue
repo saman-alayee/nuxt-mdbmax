@@ -1,6 +1,13 @@
 <template>
   <div class="price-card-container">
-    <base-card v-if="borderTop" style="border-top: 5px solid var(--yellow)">
+    <base-card
+      v-if="borderTop"
+      style="
+        border-top: 5px solid var(--yellow);
+        height: 38rem;
+        margin-top: 0rem;
+      "
+    >
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
@@ -16,18 +23,18 @@
             <p>{{ feature_six }}</p>
           </div>
           <div class="btn-container mt-4">
-          <nuxt-link :to="`/pricing/${link}`">
+            <nuxt-link :to="`/pricing/${link}`">
               <BaseButton
                 text="Choose Plan"
                 backgroundColor="var(--yellow)"
                 textColor="var(--white)"
                 outline="true"
-            /></nuxt-link>  
+            /></nuxt-link>
           </div>
         </div>
       </template>
     </base-card>
-    <base-card v-else>
+    <base-card v-else style="height: 30rem;">
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
@@ -43,7 +50,9 @@
             <p>{{ feature_six }}</p>
           </div>
           <div class="btn-container mt-4">
-          <nuxt-link :to="`/pricing/${link}`"> <BaseButton text="Choose Plan" outline="true" /></nuxt-link> 
+            <nuxt-link :to="`/pricing/${link}`">
+              <BaseButton text="Choose Plan" outline="true"
+            /></nuxt-link>
           </div>
         </div>
       </template>
@@ -98,15 +107,21 @@ export default {
       type: Boolean,
       default: false,
     },
-    link:{
+    link: {
       type: String,
       require: true,
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
+.price-card-container {
+  height: 100%;
+  width: 550px;
+  padding: 48px 26px;
+  margin-left: -6rem;
+}
 .text-container {
   display: flex;
   flex-direction: column;
@@ -118,5 +133,11 @@ export default {
 }
 .text--card p {
   font-size: 20px;
+}
+@media (max-width: 768px) {
+  .price-card-container {
+    margin-left: 0;
+    margin-top: -3rem;
+  }
 }
 </style>

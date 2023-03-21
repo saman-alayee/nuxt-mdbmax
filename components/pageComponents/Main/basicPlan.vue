@@ -56,32 +56,72 @@
           <div class="col-md-1 verticalLine"></div>
 
           <div class="col-md-5 col-sm-12 mobile-size">
-            <div class="d-flex">
+            <div class="d-flex flex-wrap">
               <div class="p-2">
                 <img
                   src="https://filecache.mediaroom.com/mr5mr_paypal/181664/PayPal_Thumbnail.jpg"
-                  width="60px"
+                  width="50px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
                   src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Emblem.jpg"
-                  width="70px"
+                  width="60px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
                   src="https://1000logos.net/wp-content/uploads/2017/03/MasterCard-Logo-1979.png"
-                  width="70px"
+                  width="60px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png"
-                  width="70px"
+                  src="https://mdbmax.com/client/assets/images/billing/american-express.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://mdbmax.com/client/assets/images/billing/discover.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://mdbmax.com/client/assets/images/billing/cartes%20bancaires.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://mdbmax.com/client/assets/images/billing/google%20pay.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://mdbmax.com/client/assets/images/billing/apple%20pay.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  src="https://mdbmax.com/client/assets/images/billing/china%20unionpay.png"
+                  width="60px"
                   height="40px"
                   alt=""
                 />
@@ -132,7 +172,8 @@ export default {
     setProduct() {
       this.productID = parseInt(this.product.split("-")[0]);
       this.nameID = this.product.split("-")[1];
-      console.log(typeof this.productId);
+      localStorage.setItem("productID", JSON.stringify(this.productID));
+      localStorage.setItem("nameID", JSON.stringify(this.nameID));
       this.$store.dispatch("login/setId", {
         productID: this.productID,
         nameID: this.nameID,

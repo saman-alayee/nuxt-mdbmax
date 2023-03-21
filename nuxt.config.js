@@ -16,21 +16,20 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css' }
 
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/style/app.css', '@fortawesome/fontawesome-svg-core/styles.css'
+    '~/assets/style/app.css',
 
   ],
-  
+
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/bootstrap-vue', '@/plugins/fontawesome.js'
+    '@/plugins/bootstrap-vue',
 
   ],
 
@@ -49,7 +48,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt', '@nuxtjs/axios', '@nuxtjs/i18n', 'nuxt-sweetalert2'
 
-    
+
   ],
 
   i18n: {
@@ -60,12 +59,50 @@ export default {
       messages: {
         en: {
           login: 'Login',
-          
+          lan: 'Language',
+          stepOne: 'Subscription plan',
+          stepTwo: 'Subscription duration',
+          Basic: "Basic Trial ",
+          Premium: "Premium",
+          Business: "Business PUB",
+          basicTime: "$2.00 / day",
+          permiumTime: "$4.99 / month",
+          businessTime: "$99.00 / month",
+          featureOne:"Access to Full Content",
+          featureTwo: "Cancel Anytime",
+          featureThree: "Unlimited movies and TV shows",
+          featureFour: "Resolution Access HD (720p)",
+          featureFive: "Priority in Support",
+          featureSix: "Priority Support in 24H",
+          featureSeven: "Resolution Access 4K+HDR",
+          featureEight: "No Advertisements",
+          featureNine: "Advertise Your Business 5M CPM",
+          choose:"Choose Plan"
+
         },
         fa: {
-          login: 'ورود'
+          login: 'ورود',
+          lan: 'زبان',
+          stepOne: 'طرح اشتراک',
+          stepTwo: 'مدت زمان اشتراک',
+          Basic: "دوره معمولی ",
+          Premium: "ویژه",
+          Business: "تجاری",
+          basicTime: "$2.00 / روزانه",
+          permiumTime: "$4.99 / ماهانه",
+          businessTime: "$99.00 / ماهانه",
+          featureOne: "دسترسی کامل به محتوا",
+          featureTwo: "لغو اشتراک در هر زمانی",
+          featureThree: "فیلم ها و سریال های نامحدود",
+          featureFour:  "دسترسی به کیفیت HD (720p)  ",
+          featureFive: "اولویت در پاسخگویی و پشتیبانی",
+          featureSix: "اولویت در پاسخگویی و پشتیبانی 24 ساعته",
+          featureSeven: "دسترسی به کیفیت 4K+HDR",
+          featureEight: "بدون تبلیغات",
+          featureNine: "بیزینس خود را 5 میلیون CPM تبلیغ کنید",
+          choose: "انتخاب پلن"
         },
-        
+
       }
     }
   },
