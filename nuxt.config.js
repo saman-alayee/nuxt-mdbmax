@@ -6,7 +6,7 @@ export default {
       { src: 'https://js.stripe.com/v3' },
     ],
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fa'
     },
     meta: [
       { charset: 'utf-8' },
@@ -65,6 +65,12 @@ export default {
       },
     ],
     defaultLocale: 'en',
+    strategy: 'prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
@@ -83,12 +89,13 @@ export default {
           featureTwo: "Cancel Anytime",
           featureThree: "Unlimited movies and TV shows",
           featureFour: "Resolution Access HD (720p)",
+          featureFour_permium: "Resolution Access Full HD (1080p)",
           featureFive: "Priority in Support",
           featureSix: "Priority Support in 24H",
           featureSeven: "Resolution Access 4K+HDR",
           featureEight: "No Advertisements",
           featureNine: "Advertise Your Business 5M CPM",
-          choose: "Choose Plan",
+          choose: "Choose",
 
 
 
@@ -115,14 +122,17 @@ export default {
           businessPlan12: "12 month subscription:$64.35/month",
           back: "Back",
           select: "Select",
+          error: "error",
+          textError: "Check your form ",
+          okay:"okay",
 
           email: "Email address ",
           username: "Username",
           password: "Password",
           account: "Your account",
-          continue: "Continue"
-
-
+          continue: "Continue",
+          SSL: "Your information is protected by 256-bit SSL encryption",
+          SSL_header: "SSL SECURE PAYMENT"
 
 
         },
@@ -131,7 +141,7 @@ export default {
           lan: 'زبان',
           stepOne: 'طرح اشتراک',
           stepTwo: 'مدت زمان اشتراک',
-          Basic: "دوره معمولی ",
+          Basic: "دوره آزمایشی ",
           Premium: "ویژه",
           Business: "تجاری",
           basicTime: "$2.00 / روزانه",
@@ -145,19 +155,24 @@ export default {
           featureSix: "اولویت در پاسخگویی و پشتیبانی 24 ساعته",
           featureSeven: "دسترسی به کیفیت K+HDR",
           featureEight: "بدون تبلیغات",
+          featureFour_permium: "دسترسی به کیفیت HD (1080p) ",
+
           featureNine: "بیزینس خود را 5 میلیون CPM تبلیغ کنید",
           choose: "انتخاب پلن",
+          error: "ارور",
+          textError: "لطفا فرم خود را چک کیند",
+          okay: "باشه",
 
           trustText_one: "در هنگام پرداخت ایمیل واقعی خود را وارد کنید، که اگر تراکنش مالی به مشکل خورد ما بتوانیم از طریق ایمیل شما پیگیری کنیم.",
           trustText_two: "در صورت انصراف مبلغ پرداختی شما با کسر استفاده روزانه شما، حداکثر ظرف 14 روز به حساب شما بازگردانده خواهد شد.",
           trustText_three: "توجه داشته خرید اشتراک برای بهبود و نگهداری سایت به طور موقت فعال میباشد، و امکان دارد حذف یا ویرایش شود.",
           trustText_four: "در صورتی که این شرایط را می‌پذیرد کلید زیر را فشار دهید و خرید اشتراک خود را کامل کنید.",
 
-          headerText: "مدت زمان طرح خود را انتخاب کنید. برنامه های طولانی تر تخفیف های بهتری ارائه می دهند!",
-          paymentText: "روش های پرداخت پذیرفته شده",
-          featureTextbasic: "طرح معمولی پایه",
-          featureTextPremium: "طرح ویژه",
-          featureTextbasic: "طرح تجاری",
+          headerText: "مدت زمان اشتراک خود را انتخاب کنید. اشتراک های طولانی تر شامل تخفیف های ویژه میشوند!",
+          paymentText: "روش های پرداخت قابل قبول",
+          featureTextbasic: "طرح آزمایشی پایه",
+          featureTextPremium: "اشتراک ویژه ",
+          featureTextbusiness: "اشتراک تجاری",
           baaicPlan: "اشتراک یک روزه ",
 
           permiumPlan1: "اشتراک یک ماهه $4.99/ماهانه ",
@@ -171,9 +186,10 @@ export default {
           businessPlan12: "اشتراک دوازده ماهه $64.35/ماهانه ",
           back: "بازگشت",
           select: "انتخاب",
+          SSL: " پرداخت امن با   SSL اطلاعات شما با رمزگذاری 256 بیتی SSL محافظت می‌شود.  ",
+          SSL_header: "پرداخت امن SSL"
 
-
-          email: "ایمیل",
+          , email: "ایمیل",
           username: "نام کاربری",
           password: "رمز عبور ",
           account: "اکانت شما ",

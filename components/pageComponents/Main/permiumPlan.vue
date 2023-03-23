@@ -2,7 +2,9 @@
   <div>
     <div class="stepper-wrapper mt-4 w-100">
       <div class="stepper-item completed">
-        <nuxt-link to="/pricing"><div class="step-counter">1</div></nuxt-link>
+        <nuxt-link :to="localePath('/pricing')"
+          ><div class="step-counter">1</div></nuxt-link
+        >
         <div class="step-name">{{ $t("stepOne") }}</div>
       </div>
       <div class="stepper-item completed">
@@ -19,8 +21,8 @@
       <template slot="content">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div>
-              <p class="header-text">
+            <div style="text-align: initial">
+              <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
             </div>
@@ -30,8 +32,9 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
+                  @input="handleInput"
                   id="exampleRadios1"
-                  value="3-BI2sXjqTkFM5OURU7rxdhzxZngtFOXkHjkLO"
+                  value="3-BI2sXjqTkFM5OURU7rxdhzxZngtFOXkHjkLO-Premium Plan: Business PUB Plan: 1 month subscription & 35M CPM"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
@@ -43,11 +46,13 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
+                  @input="handleInput"
                   id="exampleRadios2"
-                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF"
+                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF-Business PUB Plan: 3 month subscription & 35M CPM
+"
                   v-model="product"
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios2">
                   {{ $t("permiumPlan3") }}
                 </label>
               </div>
@@ -57,10 +62,12 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios3"
-                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE"
+                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE-Business PUB Plan: 6 month subscription & 35M CPM
+"
                   v-model="product"
+                  @input="handleInput"
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios3">
                   {{ $t("permiumPlan6") }}
                 </label>
               </div>
@@ -70,30 +77,31 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios4"
-                  value="6-yGPIyRere48qKQOLZdOevxztO5hh0mOVBiZb"
+                  @input="handleInput"
+                  value="6-yGPIyRere48qKQOLZdOevxztO5hh0mOVBiZb-Business PUB Plan: 12 month subscription & 35M CPM"
                   v-model="product"
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios4">
                   {{ $t("permiumPlan12") }}
                 </label>
               </div>
-              <div class="mt-5 text-center" >
-              <p >
-            {{ $t("trustText_one") }}
-              </p>
-               <p>
-            {{ $t("trustText_two") }}
-              </p>
-               <p>
-            {{ $t("trustText_three") }}
-              </p>
-               <p>
-            {{ $t("trustText_four") }}
-              </p>
-            </div>
+              <div class="mt-5" style="text-align: initial">
+                <p :dir="$dir()">
+                  {{ $t("trustText_one") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_two") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_three") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_four") }}
+                </p>
+              </div>
             </div>
             <div class="btn-end">
-              <nuxt-link to="/pricing">
+              <nuxt-link :to="localePath('/Pricing')">
                 <base-button
                   class=""
                   backgroundColor="var(--dark--green)"
@@ -110,103 +118,92 @@
               />
             </div>
           </div>
-          <div class="col-md-1 verticalLine"></div>
+          <div class="d-flex verticalLine" style="width: 60px"></div>
 
           <div class="col-md-5 col-sm-12 mobile-size">
             <div>
               <p class="text-center">{{ $t("paymentText") }}</p>
             </div>
             <div class="d-flex flex-wrap">
-              <div class="p-2">
-                <img
-                  src="@/assets/images/paypal.png"
-                  width="50px"
-                  alt=""
-                />
+              <div class="p-1">
+                <img src="@/assets/images/paypal.png" width="45px" alt="" />
               </div>
-              <div class="p-2">
-                <img
-                 src="@/assets/images/visa.png"
-                  width="60px"
-                  alt=""
-                />
+              <div class="p-1">
+                <img src="@/assets/images/visa.png" width="45px" alt="" />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/mastercard.png"
-                  width="60px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/american-express.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/discover.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/cartes bancaires.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/google pay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/google pay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/apple pay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/apple pay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/china unionpay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/china unionpay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
             </div>
             <hr class="bg-light" />
             <div class="text-center" :dir="$dir()">
+              <h6>{{ text_plan }}</h6>
               <p>&#10003; {{ $t("featureOne") }}</p>
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
               <p>&#10003; {{ $t("featureFour") }}</p>
-              <p>&#10003; {{ $t("featureFive") }}</p>
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
               <div>
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/009/664/637/non_2x/shield-icon-transparent-free-png.png"
-                  width="70px"
-                  alt=""
-                />
+                <img src="@/assets/images/payment.png" width="70px" alt="" />
               </div>
-              <div>
-                <h6>SSL SECURE PAYMENT</h6>
-                <p>Your information is protected by 256-bit SSL encryption</p>
+              <div class="p-1" style="text-align: initial;" :dir="$dir()">
+                <h6>{{ $t("SSL_header") }}</h6>
+                <p>{{ $t("SSL") }}</p>
               </div>
             </div>
           </div>
@@ -227,6 +224,7 @@ export default {
       product: "",
       productID: "",
       nameID: "",
+      text_plan: "",
     };
   },
   methods: {
@@ -242,6 +240,10 @@ export default {
       });
       this.$store.dispatch("login/loadItems");
     },
+    handleInput(event) {
+      this.text_plan = event.target.value.split("-")[2];
+      console.log(event.target);
+    },
   },
 };
 </script>
@@ -256,7 +258,7 @@ input[type="radio"] {
 .protect-card {
   border: 1px solid gray;
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px;
 }
 .btn-end {
   display: flex;
@@ -351,7 +353,5 @@ input[type="radio"] {
 label {
   font-size: 16px;
 }
-.header-text {
-  text-align: center;
-}
+
 </style>

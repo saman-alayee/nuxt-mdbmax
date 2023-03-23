@@ -21,10 +21,10 @@
             <p>{{ feature_four }}</p>
             <p>{{ feature_five }}</p>
             <p>{{ feature_six }}</p>
-             <p>{{ feature_seven }}</p>
+            <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
-            <nuxt-link :to="`/pricing/${link}`">
+            <nuxt-link :to="localePath('/Pricing/permiumPlan')">
               <BaseButton
                 :text="$t('choose')"
                 backgroundColor="var(--yellow)"
@@ -35,7 +35,7 @@
         </div>
       </template>
     </base-card>
-    <base-card v-else style="height: 34rem;">
+    <base-card v-else style="height: 34rem">
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
@@ -52,7 +52,7 @@
             <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
-            <nuxt-link :to="`/pricing/${link}`">
+            <nuxt-link :to="localePath(`/Pricing/${link}`)">
               <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
           </div>
@@ -109,7 +109,7 @@ export default {
       type: String,
       require: false,
     },
-    
+
     borderTop: {
       type: Boolean,
       default: false,
@@ -138,12 +138,15 @@ export default {
   text-align: center;
 }
 .text--card p {
-  font-size: 20px;
+  font-size: 17px;
 }
 @media (max-width: 768px) {
   .price-card-container {
     margin-left: 0;
+    width: 32rem;
     margin-top: -3rem;
   }
 }
+
+
 </style>

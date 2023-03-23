@@ -2,7 +2,9 @@
   <div>
     <div class="stepper-wrapper mt-4 w-100">
       <div class="stepper-item completed">
-        <nuxt-link to="/pricing"><div class="step-counter">1</div></nuxt-link>
+        <nuxt-link :to="localePath('/pricing')"
+          ><div class="step-counter">1</div></nuxt-link
+        >
         <div class="step-name">{{ $t("stepOne") }}</div>
       </div>
       <div class="stepper-item completed">
@@ -19,8 +21,8 @@
       <template slot="content">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div>
-              <p class="header-text">
+            <div style="text-align: initial">
+              <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
             </div>
@@ -35,26 +37,26 @@
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
-                 {{ $t("baaicPlan") }}
+                  {{ $t("baaicPlan") }}
                 </label>
               </div>
-               <div class="mt-5 text-center" >
-              <p >
-            {{ $t("trustText_one") }}
-              </p>
-               <p>
-            {{ $t("trustText_two") }}
-              </p>
-               <p>
-            {{ $t("trustText_three") }}
-              </p>
-               <p>
-            {{ $t("trustText_four") }}
-              </p>
-            </div>
+              <div class="mt-5" style="text-align: initial">
+                <p :dir="$dir()">
+                  {{ $t("trustText_one") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_two") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_three") }}
+                </p>
+                <p :dir="$dir()">
+                  {{ $t("trustText_four") }}
+                </p>
+              </div>
             </div>
             <div class="btn-end">
-              <nuxt-link to="/pricing">
+              <nuxt-link :to="localePath('/Pricing')">
                 <base-button
                   class=""
                   backgroundColor="var(--dark--green)"
@@ -71,85 +73,79 @@
               />
             </div>
           </div>
-          <div class="col-md-1 verticalLine"></div>
+          <div class="d-flex verticalLine" style="width: 60px"></div>
 
           <div class="col-md-5 col-sm-12 mobile-size">
             <div>
               <p class="text-center">{{ $t("paymentText") }}</p>
             </div>
             <div class="d-flex flex-wrap">
-              <div class="p-2">
-                <img
-                  src="@/assets/images/paypal.png"
-                  width="50px"
-                  alt=""
-                />
+              <div class="p-1">
+                <img src="@/assets/images/paypal.png" width="45px" alt="" />
               </div>
-              <div class="p-2">
-                <img
-                 src="@/assets/images/visa.png"
-                  width="60px"
-                  alt=""
-                />
+              <div class="p-1">
+                <img src="@/assets/images/visa.png" width="45px" alt="" />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/mastercard.png"
-                  width="60px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/american-express.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/discover.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
                   src="@/assets/images/cartes bancaires.png"
-                  width="60px"
-                  height="40px"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/google pay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/google pay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/apple pay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/apple pay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
-              <div class="p-2">
+              <div class="p-1">
                 <img
-                   src="@/assets/images/china unionpay.png"
-                  width="60px"
-                  height="40px"
+                  src="@/assets/images/china unionpay.png"
+                  width="45px"
+                  height="30px"
                   alt=""
                 />
               </div>
             </div>
             <hr class="bg-light" />
             <div class="text-center" :dir="$dir()">
+              <h6>{{ $t("featureTextbasic") }}</h6>
               <p>&#10003; {{ $t("featureOne") }}</p>
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
@@ -158,15 +154,11 @@
             <hr class="bg-light" />
             <div class="d-flex protect-card">
               <div>
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/009/664/637/non_2x/shield-icon-transparent-free-png.png"
-                  width="70px"
-                  alt=""
-                />
+                <img src="@/assets/images/payment.png" width="70px" alt="" />
               </div>
-              <div>
-                <h6>SSL SECURE PAYMENT</h6>
-                <p>Your information is protected by 256-bit SSL encryption</p>
+              <div class="p-1" style="text-align: initial;" :dir="$dir()">
+                <h6>{{ $t("SSL_header") }}</h6>
+                <p>{{ $t("SSL") }}</p>
               </div>
             </div>
           </div>
@@ -215,7 +207,7 @@ input[type="radio"]:checked {
 .protect-card {
   border: 1px solid gray;
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px;
 }
 .btn-end {
   display: flex;
@@ -310,7 +302,5 @@ input[type="radio"]:checked {
 label {
   font-size: 17px;
 }
-.header-text{
-  text-align: center;
-}
+
 </style>

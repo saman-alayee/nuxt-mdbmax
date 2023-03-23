@@ -25,6 +25,7 @@
         :feature_four="card.feature_four"
         :feature_five="card.feature_five"
         :feature_six="card.feature_six"
+        :feature_seven="card.feature_seven"
         :border-top="card.boderTop"
         :link="card.link"
       />
@@ -60,7 +61,7 @@ export default {
           feature_one: this.$t("featureOne"),
           feature_two: this.$t("featureTwo"),
           feature_three: this.$t("featureThree"),
-          feature_four: this.$t("featureFour"),
+          feature_four: this.$t("featureFour_permium"),
           feature_five: this.$t("featureFive"),
           feature_six: "",
           boderTop: true,
@@ -72,10 +73,10 @@ export default {
           feature_one: this.$t("featureOne"),
           feature_two: this.$t("featureTwo"),
           feature_three: this.$t("featureThree"),
-          feature_four: this.$t("featureFour"),
-          feature_five: this.$t("featureFive"),
-          feature_six: this.$t("featureSix"),
-          feature_seven: this.$t("featureSeven"),
+          feature_four: this.$t("featureSix"),
+          feature_five: this.$t("featureSeven"),
+          feature_six: this.$t("featureEight"),
+          feature_seven: this.$t("featureNine"),
           boderTop: false,
           link: "businessPlan",
         },

@@ -1,7 +1,7 @@
 <template>
-  <div class="login-container">
+  <div class="login-container" style="text-align: initial" :dir="$dir()">
     <div class="logo-container">
-      <img src="@/assets/images/main-logo.png" width="250" alt="" />
+      <img @click="goMdb" class="logo" src="@/assets/images/main-logo.png" alt="logo image " />
     </div>
 
     <base-card>
@@ -9,7 +9,9 @@
         ><form class="p-4">
           <h4>{{ $t("account") }}</h4>
           <div class="form-group">
-            <label :dir="$dir()" for="exampleInputEmail1">{{ $t("username") }}</label>
+            <label :dir="$dir()" for="exampleInputEmail1">{{
+              $t("username")
+            }}</label>
             <input
               type="text"
               class="form-control input-style"
@@ -19,7 +21,9 @@
             />
           </div>
           <div class="form-group">
-            <label :dir="$dir()" for="exampleInputEmail1">{{ $t("email") }}</label>
+            <label :dir="$dir()" for="exampleInputEmail1">{{
+              $t("email")
+            }}</label>
             <input
               type="email"
               class="form-control input-style"
@@ -29,7 +33,9 @@
             />
           </div>
           <div class="form-group" :dir="$dir()">
-            <label :dir="$dir()" for="exampleInputPassword1">{{ $t("password") }}</label>
+            <label :dir="$dir()" for="exampleInputPassword1">{{
+              $t("password")
+            }}</label>
             <input
               type="password"
               class="form-control input-style"
@@ -63,10 +69,16 @@ export default {
   },
   methods: {
     storeData() {
-      if ((this.username == "") | (this.password == "") | (this.email == "")) {
+      if (
+        this.username == "" ||
+        this.password == "" ||
+        this.email == "" ||
+        !/^[^@]+@\w+(\.\w+)+\w$/.test(this.email) ||
+        this.password.length < 8
+      ) {
         Swal.fire({
           title: "Error!",
-          text: "Please filled your form",
+          text: "Check your form ",
           icon: "error",
           confirmButtonText: "Okay",
           confirmButtonColor: "red",
@@ -80,8 +92,12 @@ export default {
           password: this.password,
           username: this.username,
         });
-        this.$router.push("/pricing");
+        this.$router.push(this.localePath({ name: "Pricing" }));
       }
+    },
+
+    goMdb() {
+      window.location.href = "https://mdbmax.com/";
     },
   },
 };
@@ -119,5 +135,10 @@ input[type="password"] {
 }
 .inside-btn:hover {
   background-color: rgb(255, 247, 0);
+}
+.logo {
+
+  cursor: pointer;
+  width: 250px;
 }
 </style>
