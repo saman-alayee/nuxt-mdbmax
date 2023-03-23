@@ -2,7 +2,7 @@
   <div class="main">
     <TheHeader />
 
-    <div class="container">
+    <div class="container application-animation">
       <Nuxt />
     </div>
   </div>
@@ -27,11 +27,19 @@ html {
 .main {
   margin: 0;
   height: 100%;
-   padding-bottom: 7rem;
+  overflow-x: hidden;
+  padding-bottom: 7rem;
   background-color: var(--light--green) !important;
 }
 a {
   text-decoration: none;
   color: var(--white);
+}
+.application-animation{
+	animation: 0.9s applicationAnimation;
+}
+@keyframes applicationAnimation {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
 }
 </style>

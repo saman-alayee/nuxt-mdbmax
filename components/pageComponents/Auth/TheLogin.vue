@@ -7,9 +7,9 @@
     <base-card>
       <template slot="content"
         ><form class="p-4">
-          <h4>Your account</h4>
+          <h4>{{ $t("account") }}</h4>
           <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
+            <label :dir="$dir()" for="exampleInputEmail1">{{ $t("username") }}</label>
             <input
               type="text"
               class="form-control input-style"
@@ -19,7 +19,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label :dir="$dir()" for="exampleInputEmail1">{{ $t("email") }}</label>
             <input
               type="email"
               class="form-control input-style"
@@ -28,8 +28,8 @@
               v-model="email"
             />
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+          <div class="form-group" :dir="$dir()">
+            <label :dir="$dir()" for="exampleInputPassword1">{{ $t("password") }}</label>
             <input
               type="password"
               class="form-control input-style"
@@ -40,7 +40,7 @@
         </form>
         <div class="p-4">
           <button class="inside-btn w-100" type="button" @click="storeData">
-            Continue
+            {{ $t("continue") }}
           </button>
         </div></template
       >

@@ -4,7 +4,7 @@
       v-if="borderTop"
       style="
         border-top: 5px solid var(--yellow);
-        height: 38rem;
+        height: 40rem;
         margin-top: 0rem;
       "
     >
@@ -21,11 +21,12 @@
             <p>{{ feature_four }}</p>
             <p>{{ feature_five }}</p>
             <p>{{ feature_six }}</p>
+             <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
             <nuxt-link :to="`/pricing/${link}`">
               <BaseButton
-                text="Choose Plan"
+                :text="$t('choose')"
                 backgroundColor="var(--yellow)"
                 textColor="var(--white)"
                 outline="true"
@@ -34,7 +35,7 @@
         </div>
       </template>
     </base-card>
-    <base-card v-else style="height: 30rem;">
+    <base-card v-else style="height: 34rem;">
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
@@ -48,10 +49,11 @@
             <p>{{ feature_four }}</p>
             <p>{{ feature_five }}</p>
             <p>{{ feature_six }}</p>
+            <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
             <nuxt-link :to="`/pricing/${link}`">
-              <BaseButton text="Choose Plan" outline="true"
+              <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
           </div>
         </div>
@@ -103,6 +105,11 @@ export default {
       type: String,
       require: false,
     },
+    feature_seven: {
+      type: String,
+      require: false,
+    },
+    
     borderTop: {
       type: Boolean,
       default: false,
@@ -118,8 +125,7 @@ export default {
 <style scoped>
 .price-card-container {
   height: 100%;
-  width: 550px;
-  padding: 48px 26px;
+  padding: 48px 0px;
   margin-left: -6rem;
 }
 .text-container {

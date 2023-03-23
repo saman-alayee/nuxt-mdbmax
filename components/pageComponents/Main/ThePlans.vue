@@ -3,7 +3,7 @@
     <div class="stepper-wrapper mt-4 w-100">
       <div class="stepper-item completed">
         <div class="step-counter">1</div>
-        <div class="step-name">{{ $t('stepOne') }}</div>
+        <div class="step-name">{{ $t("stepOne") }}</div>
       </div>
       <div class="stepper-item completed">
         <div
@@ -12,7 +12,7 @@
         >
           2
         </div>
-        <div class="step-name">{{ $t('stepTwo') }}</div>
+        <div class="step-name">{{ $t("stepTwo") }}</div>
       </div>
     </div>
     <div class="col-md-4 col-sm-12" v-for="card in cards" :key="card.title">
@@ -43,38 +43,39 @@ export default {
     return {
       cards: [
         {
-          title: "$t('login')",
-          price: "$2.00 / day",
-          feature_one: "Access to Full One Day",
-          feature_two: "Cancel Anytime",
-          feature_three: "Unlimited movies and TV shows",
-          feature_four: "Resoulution Access HD (720)",
+          title: this.$t("Basic"),
+          price: this.$t("basicTime"),
+          feature_one: this.$t("featureOne"),
+          feature_two: this.$t("featureTwo"),
+          feature_three: this.$t("featureThree"),
+          feature_four: this.$t("featureFour"),
           feature_five: "",
           feature_six: "",
           boderTop: false,
           link: "basicPlan",
         },
         {
-          title: "Permium",
-          price: "$5.00 / month",
-          feature_one: "Access to Full One Day",
-          feature_two: "Cancel Anytime",
-          feature_three: "Unlimited movies and TV shows",
-          feature_four: "Resoulution Access HD (720)",
-          feature_five: "No AD",
+          title: this.$t("Premium"),
+          price: this.$t("permiumTime"),
+          feature_one: this.$t("featureOne"),
+          feature_two: this.$t("featureTwo"),
+          feature_three: this.$t("featureThree"),
+          feature_four: this.$t("featureFour"),
+          feature_five: this.$t("featureFive"),
           feature_six: "",
           boderTop: true,
           link: "permiumPlan",
         },
         {
-          title: "Business",
-          price: "$99.00 / month",
-          feature_one: "Access to Full One Day",
-          feature_two: "Cancel Anytime",
-          feature_three: "Unlimited movies and TV shows",
-          feature_four: "Resoulution Access HD (4k+HDR)",
-          feature_five: "No AD",
-          feature_six: "Priority Support in 24H",
+          title: this.$t("Business"),
+          price: this.$t("businessTime"),
+          feature_one: this.$t("featureOne"),
+          feature_two: this.$t("featureTwo"),
+          feature_three: this.$t("featureThree"),
+          feature_four: this.$t("featureFour"),
+          feature_five: this.$t("featureFive"),
+          feature_six: this.$t("featureSix"),
+          feature_seven: this.$t("featureSeven"),
           boderTop: false,
           link: "businessPlan",
         },

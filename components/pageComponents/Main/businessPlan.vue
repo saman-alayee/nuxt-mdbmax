@@ -1,27 +1,31 @@
 <template>
   <div>
-    <div class="stepper-wrapper mt-4 w-100">
+   <div class="stepper-wrapper mt-4 w-100">
       <div class="stepper-item completed">
         <nuxt-link to="/pricing"><div class="step-counter">1</div></nuxt-link>
-        <div class="step-name">Subscription plan</div>
+        <div class="step-name">{{ $t("stepOne") }}</div>
       </div>
       <div class="stepper-item completed">
-        <div class="step-counter">2</div>
-        <div class="step-name">Subscription duration</div>
+        <div
+          class="step-counter"
+          style="background-color: var(--white); color: var(--black)"
+        >
+          2
+        </div>
+        <div class="step-name">{{ $t("stepTwo") }}</div>
       </div>
     </div>
     <BaseCard>
-      <template slot="content">
-        <div class="row">
+      <template slot="content" >
+        <div class="row" >
           <div class="col-md-6 col-sm-12">
             <div>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Excepturi facere expedita eaque ratione. Id dolorem cupiditate
+              <p class="header-text">
+                {{ $t("headerText") }}
               </p>
             </div>
-            <div class="d-flex flex-column justify-content-center">
-              <div class="form-check">
+            <div class="d-flex flex-column justify-content-center" >
+              <div class="form-check" >
                 <input
                   class="form-check-input"
                   type="radio"
@@ -32,7 +36,7 @@
                   
                 />
                 <label class="form-check-label" for="exampleRadios1">
-                  1 month subscription:$5.00/day
+                 {{ $t("businessPlan1") }}
                 </label>
               </div>
               <div class="form-check mt-2">
@@ -44,8 +48,8 @@
                   value="8-W1UIqwhUBxL6UViryNZTqoVmPFpyzVD5U0Yk"
                   v-model="product"
                 />
-                <label class="form-check-label" for="exampleRadios2">
-                  3 month subscription:$5.00/day
+               <label class="form-check-label" for="exampleRadios1">
+                 {{ $t("businessPlan3") }}
                 </label>
               </div>
               <div class="form-check mt-2">
@@ -57,8 +61,8 @@
                   value="9-CfL26TqUjJJ1uhFDxZ7ocOJmeHxKQEQ0K4LP"
                   v-model="product"
                 />
-                <label class="form-check-label" for="exampleRadios3">
-                  6 month subscription:$5.00/day
+                <label class="form-check-label" for="exampleRadios1">
+                 {{ $t("businessPlan6") }}
                 </label>
               </div>
               <div class="form-check mt-2">
@@ -70,25 +74,39 @@
                   value="10-cmN3G7OKds7ZMZIS8FNK6818efJ3VkBnc8rC"
                   v-model="product"
                 />
-                <label class="form-check-label" for="exampleRadios3">
-                  12 month subscription:$5.00/day
+                <label class="form-check-label" for="exampleRadios1">
+                 {{ $t("businessPlan12") }}
                 </label>
               </div>
+               <div class="mt-5 text-center" >
+              <p >
+            {{ $t("trustText_one") }}
+              </p>
+               <p>
+            {{ $t("trustText_two") }}
+              </p>
+               <p>
+            {{ $t("trustText_three") }}
+              </p>
+               <p>
+            {{ $t("trustText_four") }}
+              </p>
             </div>
-            <div class="btn-end">
+            </div>
+             <div class="btn-end">
               <nuxt-link to="/pricing">
                 <base-button
                   class=""
                   backgroundColor="var(--dark--green)"
                   textColor="var(--white)"
-                  text="Back"
+                  :text="$t('back')"
               /></nuxt-link>
               <base-button
                 class=""
                 backgroundColor="var(--yellow)"
                 textColor="var(--white)"
                 outline="true"
-                text="Continue"
+                :text="$t('continue')"
                 @click="setProduct"
               />
             </div>
@@ -96,39 +114,34 @@
           <div class="col-md-1 verticalLine"></div>
 
           <div class="col-md-5 col-sm-12 mobile-size">
+            <div>
+              <p class="text-center">{{ $t("paymentText") }}</p>
+            </div>
             <div class="d-flex flex-wrap">
               <div class="p-2">
                 <img
-                  src="https://filecache.mediaroom.com/mr5mr_paypal/181664/PayPal_Thumbnail.jpg"
+                  src="@/assets/images/paypal.png"
                   width="50px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
-                  src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Emblem.jpg"
+                 src="@/assets/images/visa.png"
                   width="60px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
-                  src="https://1000logos.net/wp-content/uploads/2017/03/MasterCard-Logo-1979.png"
+                  src="@/assets/images/mastercard.png"
                   width="60px"
                   alt=""
                 />
               </div>
               <div class="p-2">
                 <img
-                  src="https://mdbmax.com/client/assets/images/billing/american-express.png"
-                  width="60px"
-                  height="40px"
-                  alt=""
-                />
-              </div>
-              <div class="p-2">
-                <img
-                  src="https://mdbmax.com/client/assets/images/billing/discover.png"
+                  src="@/assets/images/american-express.png"
                   width="60px"
                   height="40px"
                   alt=""
@@ -136,7 +149,7 @@
               </div>
               <div class="p-2">
                 <img
-                  src="https://mdbmax.com/client/assets/images/billing/cartes%20bancaires.png"
+                  src="@/assets/images/discover.png"
                   width="60px"
                   height="40px"
                   alt=""
@@ -144,7 +157,7 @@
               </div>
               <div class="p-2">
                 <img
-                  src="https://mdbmax.com/client/assets/images/billing/google%20pay.png"
+                  src="@/assets/images/cartes bancaires.png"
                   width="60px"
                   height="40px"
                   alt=""
@@ -152,7 +165,7 @@
               </div>
               <div class="p-2">
                 <img
-                  src="https://mdbmax.com/client/assets/images/billing/apple%20pay.png"
+                   src="@/assets/images/google pay.png"
                   width="60px"
                   height="40px"
                   alt=""
@@ -160,7 +173,15 @@
               </div>
               <div class="p-2">
                 <img
-                  src="https://mdbmax.com/client/assets/images/billing/china%20unionpay.png"
+                   src="@/assets/images/apple pay.png"
+                  width="60px"
+                  height="40px"
+                  alt=""
+                />
+              </div>
+              <div class="p-2">
+                <img
+                   src="@/assets/images/china unionpay.png"
                   width="60px"
                   height="40px"
                   alt=""
@@ -168,11 +189,14 @@
               </div>
             </div>
             <hr class="bg-light" />
-            <div>
-              <p>&#10003; Access to Full One Day</p>
-              <p>&#10003; Cancel Anytime</p>
-              <p>&#10003; Unlimited movies and TV shows</p>
-              <p>&#10003; Resoulution Access HD (720)</p>
+            <div class="text-center" :dir="$dir()">
+             <p>&#10003; {{ $t("featureOne") }}</p>
+              <p>&#10003; {{ $t("featureTwo") }}</p>
+              <p>&#10003; {{ $t("featureThree") }}</p>
+              <p>&#10003; {{ $t("featureFour") }}</p>
+              <p>&#10003; {{ $t("featureFive") }}</p>
+              <p>&#10003; {{ $t("featureSix") }}</p>
+              <p>&#10003; {{ $t("featureSeven") }}</p>
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
@@ -240,7 +264,7 @@ input[type="radio"] {
   display: flex;
   flex-direction: row;
   align-items: end;
-  margin-top: 15rem;
+  margin-top: 7rem;
 }
 
 .stepper-wrapper {
@@ -258,7 +282,9 @@ input[type="radio"] {
 }
 @media (max-width: 768px) {
   .mobile-size {
-    display: none;
+     margin-top: 2rem;
+    padding: 8px;
+    border-top: 1px solid gray;
   }
 }
 
@@ -326,5 +352,8 @@ input[type="radio"] {
 }
 label {
   font-size: 16px;
+}
+.header-text{
+  text-align: center;
 }
 </style>
