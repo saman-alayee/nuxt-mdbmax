@@ -1,0 +1,74 @@
+[
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "index___fa",
+    "path": "/fa",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "Pricing___en",
+    "path": "/en/Pricing",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index"
+  },
+  {
+    "name": "success___en",
+    "path": "/en/success",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index"
+  },
+  {
+    "name": "Pricing___fa",
+    "path": "/fa/Pricing",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index"
+  },
+  {
+    "name": "success___fa",
+    "path": "/fa/success",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index"
+  },
+  {
+    "name": "Pricing-basicPlan___en",
+    "path": "/en/Pricing/basicPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index"
+  },
+  {
+    "name": "Pricing-businessPlan___en",
+    "path": "/en/Pricing/businessPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index"
+  },
+  {
+    "name": "Pricing-permiumPlan___en",
+    "path": "/en/Pricing/permiumPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index"
+  },
+  {
+    "name": "Pricing-basicPlan___fa",
+    "path": "/fa/Pricing/basicPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index"
+  },
+  {
+    "name": "Pricing-businessPlan___fa",
+    "path": "/fa/Pricing/businessPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index"
+  },
+  {
+    "name": "Pricing-permiumPlan___fa",
+    "path": "/fa/Pricing/permiumPlan",
+    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index"
+  }
+]

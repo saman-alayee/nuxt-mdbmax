@@ -65,24 +65,8 @@ const data = {
                 .then((res) => {
                     console.log(res.data)
                     commit('setRespone', res.data.url)
-                    // window.location.href = 'https://urlg.eu/';
-                    axios
-                .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
+                    window.location.href = 'https://urlg.eu/';
 
-                    username: JSON.parse(localStorage.getItem('username')),
-                    password: JSON.parse(localStorage.getItem('password')),
-
-                })
-                .then((res) => {
-                    console.log(res.data)
-                    commit('setRespone', res.data.url)
-
-                })
-                .catch((err) => {
-
-                    console.log(err);
-
-                });
 
                 })
                 .catch((err) => {
@@ -133,5 +117,22 @@ const data = {
     //     },
 
     // }
+    // axios
+    //             .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
+
+    //     username: JSON.parse(localStorage.getItem('username')),
+    //     password: JSON.parse(localStorage.getItem('password')),
+
+    // })
+    //     .then((res) => {
+    //         console.log(res.data)
+    //         commit('setRespone', res.data.url)
+
+    //     })
+    //     .catch((err) => {
+
+    //         console.log(err);
+
+    //     });
 }
 export default data;

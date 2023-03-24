@@ -140,8 +140,8 @@ margin-top: 4rem;
 }
 @media (max-width: 768px) {
   .price-card-container {
-    margin-left: 0;
-    width: 32rem;
+       margin-left: 10px;
+    width: 20rem;
     margin-top:0rem;
   }
 }
