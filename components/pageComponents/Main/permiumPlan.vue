@@ -21,7 +21,7 @@
       <template slot="content">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div style="text-align: initial">
+            <div style="text-align: justify">
               <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
@@ -34,7 +34,7 @@
                   name="exampleRadios"
                   @input="handleInput"
                   id="exampleRadios1"
-                  value="3-BI2sXjqTkFM5OURU7rxdhzxZngtFOXkHjkLO-Premium Plan: Business PUB Plan: 1 month subscription & 35M CPM"
+                  value="3-BI2sXjqTkFM5OURU7rxdhzxZngtFOXkHjkLO-Premium Plan: 1 month subscription"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
@@ -48,7 +48,7 @@
                   name="exampleRadios"
                   @input="handleInput"
                   id="exampleRadios2"
-                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF-Business PUB Plan: 3 month subscription & 35M CPM
+                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF-Premium Plan: 3 month subscription
 "
                   v-model="product"
                 />
@@ -62,7 +62,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios3"
-                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE-Business PUB Plan: 6 month subscription & 35M CPM
+                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE-Premium Plan: 6 month subscription
 "
                   v-model="product"
                   @input="handleInput"
@@ -78,14 +78,14 @@
                   name="exampleRadios"
                   id="exampleRadios4"
                   @input="handleInput"
-                  value="6-yGPIyRere48qKQOLZdOevxztO5hh0mOVBiZb-Business PUB Plan: 12 month subscription & 35M CPM"
+                  value="6-yGPIyRere48qKQOLZdOevxztO5hh0mOVBiZb-Premium Plan: 12 month subscription"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios4">
                   {{ $t("permiumPlan12") }}
                 </label>
               </div>
-              <div class="mt-5" style="text-align: initial">
+              <div class="mt-5" style="text-align: justify">
                 <p :dir="$dir()">
                   {{ $t("trustText_one") }}
                 </p>
@@ -189,19 +189,20 @@
               </div>
             </div>
             <hr class="bg-light" />
-            <div class="text-center" :dir="$dir()">
+            <div class="text-justify" :dir="$dir()">
               <h6>{{ text_plan }}</h6>
               <p>&#10003; {{ $t("featureOne") }}</p>
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
-              <p>&#10003; {{ $t("featureFour") }}</p>
+              <p>&#10003; {{ $t("featureFive") }}</p>
+              <p>&#10003; {{ $t("featureFour_permium") }}</p>
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
-              <div>
-                <img src="@/assets/images/payment.png" width="70px" alt="" />
+              <div class="p-1">
+                <img  src="@/assets/images/payment.png" width="80px" alt="SSL logo" />
               </div>
-              <div class="p-1" style="text-align: initial;" :dir="$dir()">
+              <div class="p-1" style="text-align: justify;" :dir="$dir()">
                 <h6>{{ $t("SSL_header") }}</h6>
                 <p>{{ $t("SSL") }}</p>
               </div>
@@ -353,5 +354,7 @@ input[type="radio"] {
 label {
   font-size: 16px;
 }
-
+.text-justify{
+  text-align: justify;
+}
 </style>

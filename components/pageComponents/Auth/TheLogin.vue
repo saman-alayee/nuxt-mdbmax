@@ -1,13 +1,22 @@
 <template>
   <div class="login-container" style="text-align: initial" :dir="$dir()">
     <div class="logo-container">
-      <img @click="goMdb" class="logo" src="@/assets/images/main-logo.png" alt="logo image " />
+      <img
+        @click="goMdb"
+        class="logo"
+        src="@/assets/images/main-logo.png"
+        alt="logo image "
+      />
     </div>
 
-    <base-card>
+    <base-card class="mt-4">
       <template slot="content"
         ><form class="p-4">
+         
           <h4>{{ $t("account") }}</h4>
+           <div class="alert alert-warning mt-4" role="alert">
+            {{ $t("trustText_one") }}
+          </div>
           <div class="form-group">
             <label :dir="$dir()" for="exampleInputEmail1">{{
               $t("username")
@@ -77,10 +86,9 @@ export default {
         this.password.length < 8
       ) {
         Swal.fire({
-          title: "Error!",
-          text: "Check your form ",
+          title: this.$t("textError"),
           icon: "error",
-          confirmButtonText: "Okay",
+          confirmButtonText: this.$t("continue"),
           confirmButtonColor: "red",
         });
       } else {
@@ -137,7 +145,6 @@ input[type="password"] {
   background-color: rgb(255, 247, 0);
 }
 .logo {
-
   cursor: pointer;
   width: 250px;
 }

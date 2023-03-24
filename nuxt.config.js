@@ -101,7 +101,7 @@ export default {
 
           headerText: "Select the duration of your plan. Longer plans offer better discounts!",
           paymentText: "Accepted Payment Methods",
-          featureTextbasic: "Basic Trial Plan",
+          featureTextbasic_plan: "Basic Trial Plan",
           featureTextPremium: "Premium Plan",
           featureTextbasic: "Business PUB Plan",
           baaicPlan: "1 day subscription",
@@ -125,11 +125,13 @@ export default {
           error: "error",
           textError: "Check your form ",
           okay:"okay",
+          sucess: "success",
+
 
           email: "Email address ",
           username: "Username",
           password: "Password",
-          account: "Your account",
+          account: "Create a new account",
           continue: "Continue",
           SSL: "Your information is protected by 256-bit SSL encryption",
           SSL_header: "SSL SECURE PAYMENT"
@@ -139,11 +141,12 @@ export default {
         fa: {
           login: 'ورود',
           lan: 'زبان',
+          sucess:"پرداخت موفقیت آمیز بود",
           stepOne: 'طرح اشتراک',
           stepTwo: 'مدت زمان اشتراک',
-          Basic: "دوره آزمایشی ",
-          Premium: "ویژه",
-          Business: "تجاری",
+          Basic: "اشتراک آزمایشی ",
+          Premium: "اشتراک ویژه ",
+          Business: "اشتراک تجاری",
           basicTime: "$2.00 / روزانه",
           permiumTime: "$4.99 / ماهانه",
           businessTime: "$99.00 / ماهانه",
@@ -153,13 +156,13 @@ export default {
           featureFour: "دسترسی به کیفیت HD (720p)  ",
           featureFive: "اولویت در پاسخگویی و پشتیبانی",
           featureSix: "اولویت در پاسخگویی و پشتیبانی 24 ساعته",
-          featureSeven: "دسترسی به کیفیت K+HDR",
+          featureSeven: "دسترسی به همه کیفیت ",
           featureEight: "بدون تبلیغات",
           featureFour_permium: "دسترسی به کیفیت HD (1080p) ",
 
           featureNine: "بیزینس خود را 5 میلیون CPM تبلیغ کنید",
-          choose: "انتخاب پلن",
-          error: "ارور",
+          choose: "انتخاب اشتراک",
+          error: "به مشکل برخوردید",
           textError: "لطفا فرم خود را چک کیند",
           okay: "باشه",
 
@@ -192,7 +195,7 @@ export default {
           , email: "ایمیل",
           username: "نام کاربری",
           password: "رمز عبور ",
-          account: "اکانت شما ",
+          account: " ایجاد حساب کاربری ",
           continue: "ادامه"
 
 

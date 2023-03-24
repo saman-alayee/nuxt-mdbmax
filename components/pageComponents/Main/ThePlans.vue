@@ -15,7 +15,7 @@
         <div class="step-name">{{ $t("stepTwo") }}</div>
       </div>
     </div>
-    <div class="col-md-4 col-sm-12" v-for="card in cards" :key="card.title">
+    <div class="col-md-4 col-sm-12 mt-5" v-for="card in cards" :key="card.title">
       <priceCard
         :title="card.title"
         :price="card.price"
@@ -31,6 +31,7 @@
       />
     </div>
   </div>
+  
 </template>
 
 <script>

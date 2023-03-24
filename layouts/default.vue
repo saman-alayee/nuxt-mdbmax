@@ -26,7 +26,7 @@ html {
 }
 .main {
   margin: 0;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
   padding-bottom: 7rem;
   background-color: var(--light--green) !important;

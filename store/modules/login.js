@@ -57,15 +57,51 @@ const data = {
             axios
                 .post("http://127.0.0.1:8000/success/", {
 
-                    username: JSON.parse(localStorage.getItem('username')),
                     password: JSON.parse(localStorage.getItem('password')),
+                    username: JSON.parse(localStorage.getItem('username')),
                     email: JSON.parse(localStorage.getItem('email')),
                     productID: JSON.parse(localStorage.getItem('productID')),
                 })
                 .then((res) => {
                     console.log(res.data)
                     commit('setRespone', res.data.url)
-                    window.location.href = 'https://urlg.eu/';
+                    // window.location.href = 'https://urlg.eu/';
+                    axios
+                .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
+
+                    username: JSON.parse(localStorage.getItem('username')),
+                    password: JSON.parse(localStorage.getItem('password')),
+
+                })
+                .then((res) => {
+                    console.log(res.data)
+                    commit('setRespone', res.data.url)
+
+                })
+                .catch((err) => {
+
+                    console.log(err);
+
+                });
+
+                })
+                .catch((err) => {
+
+                    console.log(err);
+
+                });
+        },
+        sendAuth({ commit, state }) {
+            axios
+                .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
+
+                    username: JSON.parse(localStorage.getItem('username')),
+                    password: JSON.parse(localStorage.getItem('password')),
+
+                })
+                .then((res) => {
+                    console.log(res.data)
+                    commit('setRespone', res.data.url)
 
                 })
                 .catch((err) => {

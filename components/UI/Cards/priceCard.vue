@@ -5,7 +5,7 @@
       style="
         border-top: 5px solid var(--yellow);
         height: 40rem;
-        margin-top: 0rem;
+        margin-top: -2rem;
       "
     >
       <template slot="content">
@@ -124,9 +124,7 @@ export default {
 
 <style scoped>
 .price-card-container {
-  height: 100%;
-  padding: 48px 0px;
-  margin-left: -6rem;
+margin-top: 4rem;
 }
 .text-container {
   display: flex;
@@ -144,7 +142,7 @@ export default {
   .price-card-container {
     margin-left: 0;
     width: 32rem;
-    margin-top: -3rem;
+    margin-top:0rem;
   }
 }
 

@@ -21,7 +21,7 @@
       <template slot="content">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div style="text-align: initial">
+            <div style="text-align: justify">
               <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
@@ -40,7 +40,7 @@
                   {{ $t("baaicPlan") }}
                 </label>
               </div>
-              <div class="mt-5" style="text-align: initial">
+              <div class="mt-5" style="text-align: justify">
                 <p :dir="$dir()">
                   {{ $t("trustText_one") }}
                 </p>
@@ -144,8 +144,8 @@
               </div>
             </div>
             <hr class="bg-light" />
-            <div class="text-center" :dir="$dir()">
-              <h6>{{ $t("featureTextbasic") }}</h6>
+            <div class="text-justify" :dir="$dir()">
+              <h6>{{ $t("featureTextbasic_plan") }}</h6>
               <p>&#10003; {{ $t("featureOne") }}</p>
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
@@ -153,10 +153,10 @@
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
-              <div>
-                <img src="@/assets/images/payment.png" width="70px" alt="" />
+              <div class="p-1">
+                <img src="@/assets/images/payment.png" width="80px" alt="SSl logo" />
               </div>
-              <div class="p-1" style="text-align: initial;" :dir="$dir()">
+              <div class="p-1" style="text-align: justify;" :dir="$dir()">
                 <h6>{{ $t("SSL_header") }}</h6>
                 <p>{{ $t("SSL") }}</p>
               </div>
@@ -165,6 +165,7 @@
         </div>
       </template>
     </BaseCard>
+    
   </div>
 </template>
 
@@ -302,5 +303,7 @@ input[type="radio"]:checked {
 label {
   font-size: 17px;
 }
-
+.text-justify{
+  text-align: justify;
+}
 </style>
