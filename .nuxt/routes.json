@@ -2,73 +2,85 @@
   {
     "name": "index___en",
     "path": "/en",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_a8fe7fce"
   },
   {
     "name": "index___fa",
     "path": "/fa",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_a8fe7fce"
   },
   {
     "name": "Pricing___en",
     "path": "/en/Pricing",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\index.vue",
-    "chunkName": "pages/Pricing/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index",
+    "_name": "_cd69fa96"
   },
   {
     "name": "success___en",
     "path": "/en/success",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\success\\\\index.vue",
-    "chunkName": "pages/success/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index",
+    "_name": "_c189e390"
   },
   {
     "name": "Pricing___fa",
     "path": "/fa/Pricing",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\index.vue",
-    "chunkName": "pages/Pricing/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index",
+    "_name": "_cd69fa96"
   },
   {
     "name": "success___fa",
     "path": "/fa/success",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\success\\\\index.vue",
-    "chunkName": "pages/success/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index",
+    "_name": "_c189e390"
   },
   {
     "name": "Pricing-basicPlan___en",
     "path": "/en/Pricing/basicPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/basicPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index",
+    "_name": "_68c0ece8"
   },
   {
     "name": "Pricing-businessPlan___en",
     "path": "/en/Pricing/businessPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/businessPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index",
+    "_name": "_6d48994c"
   },
   {
     "name": "Pricing-permiumPlan___en",
     "path": "/en/Pricing/permiumPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/permiumPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index",
+    "_name": "_7cdb74b6"
   },
   {
     "name": "Pricing-basicPlan___fa",
     "path": "/fa/Pricing/basicPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/basicPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index",
+    "_name": "_68c0ece8"
   },
   {
     "name": "Pricing-businessPlan___fa",
     "path": "/fa/Pricing/businessPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/businessPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index",
+    "_name": "_6d48994c"
   },
   {
     "name": "Pricing-permiumPlan___fa",
     "path": "/fa/Pricing/permiumPlan",
-    "component": "E:\\\\shopping_nuxt\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
-    "chunkName": "pages/Pricing/permiumPlan/index"
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\New folder\\\\mdbamxx\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index",
+    "_name": "_7cdb74b6"
   }
 ]

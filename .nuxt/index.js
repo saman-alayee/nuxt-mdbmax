@@ -13,13 +13,13 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_33220a88 from 'nuxt_plugin_plugin_33220a88' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_5029380e from 'nuxt_plugin_bootstrapvue_5029380e' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_srcplugin4506772a_c35f6664 from 'nuxt_plugin_srcplugin4506772a_c35f6664' // Source: .\\src.plugin.4506772a.js (mode: 'client')
-import nuxt_plugin_pluginutils_afb08122 from 'nuxt_plugin_pluginutils_afb08122' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginrouting_1993a60c from 'nuxt_plugin_pluginrouting_1993a60c' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_250870b5 from 'nuxt_plugin_pluginmain_250870b5' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
-import nuxt_plugin_axios_631ba8df from 'nuxt_plugin_axios_631ba8df' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_051d2e2e from 'nuxt_plugin_plugin_051d2e2e' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_69cef480 from 'nuxt_plugin_bootstrapvue_69cef480' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_srcplugin6cdcb98e_202297e6 from 'nuxt_plugin_srcplugin6cdcb98e_202297e6' // Source: .\\src.plugin.6cdcb98e.js (mode: 'client')
+import nuxt_plugin_pluginutils_4fe9e33d from 'nuxt_plugin_pluginutils_4fe9e33d' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_9a02d570 from 'nuxt_plugin_pluginrouting_9a02d570' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_11ab9b27 from 'nuxt_plugin_pluginmain_11ab9b27' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_axios_d314115e from 'nuxt_plugin_axios_d314115e' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_bootstrapvue_8290879a from 'nuxt_plugin_bootstrapvue_8290879a' // Source: ..\\plugins\\bootstrap-vue (mode: 'all')
 import nuxt_plugin_i18n_1fba523a from 'nuxt_plugin_i18n_1fba523a' // Source: ..\\plugins\\i18n.js (mode: 'all')
 
@@ -219,32 +219,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_33220a88 === 'function') {
-    await nuxt_plugin_plugin_33220a88(app.context, inject)
+  if (typeof nuxt_plugin_plugin_051d2e2e === 'function') {
+    await nuxt_plugin_plugin_051d2e2e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_5029380e === 'function') {
-    await nuxt_plugin_bootstrapvue_5029380e(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_69cef480 === 'function') {
+    await nuxt_plugin_bootstrapvue_69cef480(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_srcplugin4506772a_c35f6664 === 'function') {
-    await nuxt_plugin_srcplugin4506772a_c35f6664(app.context, inject)
+  if (process.client && typeof nuxt_plugin_srcplugin6cdcb98e_202297e6 === 'function') {
+    await nuxt_plugin_srcplugin6cdcb98e_202297e6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginutils_afb08122 === 'function') {
-    await nuxt_plugin_pluginutils_afb08122(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_4fe9e33d === 'function') {
+    await nuxt_plugin_pluginutils_4fe9e33d(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_1993a60c === 'function') {
-    await nuxt_plugin_pluginrouting_1993a60c(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_9a02d570 === 'function') {
+    await nuxt_plugin_pluginrouting_9a02d570(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_250870b5 === 'function') {
-    await nuxt_plugin_pluginmain_250870b5(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_11ab9b27 === 'function') {
+    await nuxt_plugin_pluginmain_11ab9b27(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_631ba8df === 'function') {
-    await nuxt_plugin_axios_631ba8df(app.context, inject)
+  if (typeof nuxt_plugin_axios_d314115e === 'function') {
+    await nuxt_plugin_axios_d314115e(app.context, inject)
   }
 
   if (typeof nuxt_plugin_bootstrapvue_8290879a === 'function') {
