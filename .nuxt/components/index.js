@@ -4,10 +4,10 @@ export const PageComponentsMainBusinessPlan = () => import('../..\\components\\p
 export const PageComponentsMainPermiumPlan = () => import('../..\\components\\pageComponents\\Main\\permiumPlan.vue' /* webpackChunkName: "components/page-components-main-permium-plan" */).then(c => wrapFunctional(c.default || c))
 export const PageComponentsMainSuccessPage = () => import('../..\\components\\pageComponents\\Main\\successPage.vue' /* webpackChunkName: "components/page-components-main-success-page" */).then(c => wrapFunctional(c.default || c))
 export const PageComponentsMainThePlans = () => import('../..\\components\\pageComponents\\Main\\ThePlans.vue' /* webpackChunkName: "components/page-components-main-the-plans" */).then(c => wrapFunctional(c.default || c))
+export const PageComponentsNavigationTheHeader = () => import('../..\\components\\pageComponents\\Navigation\\TheHeader.vue' /* webpackChunkName: "components/page-components-navigation-the-header" */).then(c => wrapFunctional(c.default || c))
 export const UIButtonBaseButton = () => import('../..\\components\\UI\\Button\\baseButton.vue' /* webpackChunkName: "components/u-i-button-base-button" */).then(c => wrapFunctional(c.default || c))
 export const UICardsBaseCard = () => import('../..\\components\\UI\\Cards\\baseCard.vue' /* webpackChunkName: "components/u-i-cards-base-card" */).then(c => wrapFunctional(c.default || c))
 export const UICardsPriceCard = () => import('../..\\components\\UI\\Cards\\priceCard.vue' /* webpackChunkName: "components/u-i-cards-price-card" */).then(c => wrapFunctional(c.default || c))
-export const PageComponentsNavigationTheHeader = () => import('../..\\components\\pageComponents\\Navigation\\TheHeader.vue' /* webpackChunkName: "components/page-components-navigation-the-header" */).then(c => wrapFunctional(c.default || c))
 export const UIInputSearchInput = () => import('../..\\components\\UI\\input\\searchInput.vue' /* webpackChunkName: "components/u-i-input-search-input" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607

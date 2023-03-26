@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:16.16.0-alpine
 
 # create destination directory
 RUN mkdir -p /usr/src/nuxt-app
@@ -10,7 +10,7 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm i
+RUN npm install
 RUN npm run build
 
 EXPOSE 3000

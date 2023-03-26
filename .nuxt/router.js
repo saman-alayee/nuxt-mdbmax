@@ -4,12 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _a8fe7fce = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _cd69fa96 = () => interopDefault(import('..\\pages\\Pricing\\index.vue' /* webpackChunkName: "pages/Pricing/index" */))
-const _c189e390 = () => interopDefault(import('..\\pages\\success\\index.vue' /* webpackChunkName: "pages/success/index" */))
-const _68c0ece8 = () => interopDefault(import('..\\pages\\Pricing\\basicPlan\\index.vue' /* webpackChunkName: "pages/Pricing/basicPlan/index" */))
-const _6d48994c = () => interopDefault(import('..\\pages\\Pricing\\businessPlan\\index.vue' /* webpackChunkName: "pages/Pricing/businessPlan/index" */))
-const _7cdb74b6 = () => interopDefault(import('..\\pages\\Pricing\\permiumPlan\\index.vue' /* webpackChunkName: "pages/Pricing/permiumPlan/index" */))
+const _cccbb332 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _28c4d427 = () => interopDefault(import('..\\pages\\Pricing\\index.vue' /* webpackChunkName: "pages/Pricing/index" */))
+const _2eb4dfaa = () => interopDefault(import('..\\pages\\success\\index.vue' /* webpackChunkName: "pages/success/index" */))
+const _18c62036 = () => interopDefault(import('..\\pages\\Pricing\\basicPlan\\index.vue' /* webpackChunkName: "pages/Pricing/basicPlan/index" */))
+const _1a75fb3e = () => interopDefault(import('..\\pages\\Pricing\\businessPlan\\index.vue' /* webpackChunkName: "pages/Pricing/businessPlan/index" */))
+const _f5d0451a = () => interopDefault(import('..\\pages\\Pricing\\permiumPlan\\index.vue' /* webpackChunkName: "pages/Pricing/permiumPlan/index" */))
 
 const emptyFn = () => {}
 
@@ -24,52 +24,76 @@ export const routerOptions = {
 
   routes: [{
     path: "/en",
-    component: _a8fe7fce,
+    component: _cccbb332,
     name: "index___en"
   }, {
     path: "/fa",
-    component: _a8fe7fce,
+    component: _cccbb332,
     name: "index___fa"
   }, {
+    path: "/Pricing",
+    component: _28c4d427,
+    name: "Pricing"
+  }, {
+    path: "/success",
+    component: _2eb4dfaa,
+    name: "success"
+  }, {
     path: "/en/Pricing",
-    component: _cd69fa96,
+    component: _28c4d427,
     name: "Pricing___en"
   }, {
     path: "/en/success",
-    component: _c189e390,
+    component: _2eb4dfaa,
     name: "success___en"
   }, {
     path: "/fa/Pricing",
-    component: _cd69fa96,
+    component: _28c4d427,
     name: "Pricing___fa"
   }, {
     path: "/fa/success",
-    component: _c189e390,
+    component: _2eb4dfaa,
     name: "success___fa"
   }, {
+    path: "/Pricing/basicPlan",
+    component: _18c62036,
+    name: "Pricing-basicPlan"
+  }, {
+    path: "/Pricing/businessPlan",
+    component: _1a75fb3e,
+    name: "Pricing-businessPlan"
+  }, {
+    path: "/Pricing/permiumPlan",
+    component: _f5d0451a,
+    name: "Pricing-permiumPlan"
+  }, {
     path: "/en/Pricing/basicPlan",
-    component: _68c0ece8,
+    component: _18c62036,
     name: "Pricing-basicPlan___en"
   }, {
     path: "/en/Pricing/businessPlan",
-    component: _6d48994c,
+    component: _1a75fb3e,
     name: "Pricing-businessPlan___en"
   }, {
     path: "/en/Pricing/permiumPlan",
-    component: _7cdb74b6,
+    component: _f5d0451a,
     name: "Pricing-permiumPlan___en"
   }, {
     path: "/fa/Pricing/basicPlan",
-    component: _68c0ece8,
+    component: _18c62036,
     name: "Pricing-basicPlan___fa"
   }, {
     path: "/fa/Pricing/businessPlan",
-    component: _6d48994c,
+    component: _1a75fb3e,
     name: "Pricing-businessPlan___fa"
   }, {
     path: "/fa/Pricing/permiumPlan",
-    component: _7cdb74b6,
+    component: _f5d0451a,
     name: "Pricing-permiumPlan___fa"
+  }, {
+    path: "/",
+    component: _cccbb332,
+    name: "index"
   }],
 
   fallback: false

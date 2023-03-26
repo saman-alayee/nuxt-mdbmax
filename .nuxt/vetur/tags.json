@@ -17,6 +17,9 @@
   "PageComponentsMainThePlans": {
     "description": "Auto imported from components/pageComponents/Main/ThePlans.vue"
   },
+  "PageComponentsNavigationTheHeader": {
+    "description": "Auto imported from components/pageComponents/Navigation/TheHeader.vue"
+  },
   "UIButtonBaseButton": {
     "description": "Auto imported from components/UI/Button/baseButton.vue"
   },
@@ -25,9 +28,6 @@
   },
   "UICardsPriceCard": {
     "description": "Auto imported from components/UI/Cards/priceCard.vue"
-  },
-  "PageComponentsNavigationTheHeader": {
-    "description": "Auto imported from components/pageComponents/Navigation/TheHeader.vue"
   },
   "UIInputSearchInput": {
     "description": "Auto imported from components/UI/input/searchInput.vue"
