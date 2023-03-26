@@ -31,14 +31,6 @@ export const routerOptions = {
     component: _cccbb332,
     name: "index___fa"
   }, {
-    path: "/Pricing",
-    component: _28c4d427,
-    name: "Pricing"
-  }, {
-    path: "/success",
-    component: _2eb4dfaa,
-    name: "success"
-  }, {
     path: "/en/Pricing",
     component: _28c4d427,
     name: "Pricing___en"
@@ -54,18 +46,6 @@ export const routerOptions = {
     path: "/fa/success",
     component: _2eb4dfaa,
     name: "success___fa"
-  }, {
-    path: "/Pricing/basicPlan",
-    component: _18c62036,
-    name: "Pricing-basicPlan"
-  }, {
-    path: "/Pricing/businessPlan",
-    component: _1a75fb3e,
-    name: "Pricing-businessPlan"
-  }, {
-    path: "/Pricing/permiumPlan",
-    component: _f5d0451a,
-    name: "Pricing-permiumPlan"
   }, {
     path: "/en/Pricing/basicPlan",
     component: _18c62036,
@@ -90,10 +70,6 @@ export const routerOptions = {
     path: "/fa/Pricing/permiumPlan",
     component: _f5d0451a,
     name: "Pricing-permiumPlan___fa"
-  }, {
-    path: "/",
-    component: _cccbb332,
-    name: "index"
   }],
 
   fallback: false
