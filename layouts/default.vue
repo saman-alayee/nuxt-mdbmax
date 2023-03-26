@@ -9,16 +9,13 @@
 </template>
 
 <script>
-import TheHeader from "@/components/pagecomponents/Navigation/TheHeader";
+import TheHeader from '../components/pageComponents/Navigation/TheHeader.vue';
 
 export default {
   components: {
-    TheHeader,
-  },
-  data() {
-    return {};
-  },
-};
+    TheHeader
+  }
+}
 </script>
 <style scoped>
 html {
@@ -35,11 +32,15 @@ a {
   text-decoration: none;
   color: var(--white);
 }
-.application-animation{
-	animation: 0.9s applicationAnimation;
+.application-animation {
+  animation: 0.9s applicationAnimation;
 }
 @keyframes applicationAnimation {
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

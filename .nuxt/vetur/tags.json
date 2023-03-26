@@ -2,6 +2,9 @@
   "PageComponentsAuthTheLogin": {
     "description": "Auto imported from components/pageComponents/Auth/TheLogin.vue"
   },
+  "PageComponentsNavigationTheHeader": {
+    "description": "Auto imported from components/pageComponents/Navigation/TheHeader.vue"
+  },
   "PageComponentsMainBasicPlan": {
     "description": "Auto imported from components/pageComponents/Main/basicPlan.vue"
   },
@@ -16,9 +19,6 @@
   },
   "PageComponentsMainThePlans": {
     "description": "Auto imported from components/pageComponents/Main/ThePlans.vue"
-  },
-  "PageComponentsNavigationTheHeader": {
-    "description": "Auto imported from components/pageComponents/Navigation/TheHeader.vue"
   },
   "UIButtonBaseButton": {
     "description": "Auto imported from components/UI/Button/baseButton.vue"
