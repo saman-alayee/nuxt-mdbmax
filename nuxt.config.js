@@ -1,5 +1,8 @@
 export default {
   target: 'server',
+  server: {
+    host: '217.160.144.202' // default: localhost
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mdbmax',
