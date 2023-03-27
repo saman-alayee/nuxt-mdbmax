@@ -1,8 +1,9 @@
 export default {
   target: 'server',
   server: {
-    host: '217.160.144.202' // default: localhost
+    host: '127.0.0.1' // default: localhost
   },
+  buildDir:'_nuxt',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mdbmax',
@@ -211,5 +212,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath:'_nuxt/dist/'
   }
 }

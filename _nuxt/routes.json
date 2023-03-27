@@ -1,0 +1,86 @@
+[
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_cccbb332"
+  },
+  {
+    "name": "index___fa",
+    "path": "/fa",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_cccbb332"
+  },
+  {
+    "name": "Pricing___en",
+    "path": "/en/Pricing",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index",
+    "_name": "_28c4d427"
+  },
+  {
+    "name": "success___en",
+    "path": "/en/success",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index",
+    "_name": "_2eb4dfaa"
+  },
+  {
+    "name": "Pricing___fa",
+    "path": "/fa/Pricing",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\index.vue",
+    "chunkName": "pages/Pricing/index",
+    "_name": "_28c4d427"
+  },
+  {
+    "name": "success___fa",
+    "path": "/fa/success",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\success\\\\index.vue",
+    "chunkName": "pages/success/index",
+    "_name": "_2eb4dfaa"
+  },
+  {
+    "name": "Pricing-basicPlan___en",
+    "path": "/en/Pricing/basicPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index",
+    "_name": "_18c62036"
+  },
+  {
+    "name": "Pricing-businessPlan___en",
+    "path": "/en/Pricing/businessPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index",
+    "_name": "_1a75fb3e"
+  },
+  {
+    "name": "Pricing-permiumPlan___en",
+    "path": "/en/Pricing/permiumPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index",
+    "_name": "_f5d0451a"
+  },
+  {
+    "name": "Pricing-basicPlan___fa",
+    "path": "/fa/Pricing/basicPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\basicPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/basicPlan/index",
+    "_name": "_18c62036"
+  },
+  {
+    "name": "Pricing-businessPlan___fa",
+    "path": "/fa/Pricing/businessPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\businessPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/businessPlan/index",
+    "_name": "_1a75fb3e"
+  },
+  {
+    "name": "Pricing-permiumPlan___fa",
+    "path": "/fa/Pricing/permiumPlan",
+    "component": "C:\\\\Users\\\\User\\\\Desktop\\\\mdbamxx\\\\pages\\\\Pricing\\\\permiumPlan\\\\index.vue",
+    "chunkName": "pages/Pricing/permiumPlan/index",
+    "_name": "_f5d0451a"
+  }
+]
