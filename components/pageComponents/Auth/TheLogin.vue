@@ -12,9 +12,8 @@
     <base-card class="mt-4">
       <template slot="content"
         ><form class="p-4">
-         
           <h4>{{ $t("account") }}</h4>
-           <div class="alert alert-warning mt-4" role="alert">
+          <div class="alert alert-warning mt-4" role="alert">
             {{ $t("trustText_one") }}
           </div>
           <div class="form-group">
@@ -100,7 +99,26 @@ export default {
           password: this.password,
           username: this.username,
         });
-        this.$router.push(this.localePath({ name: "Pricing" }));
+        this.$store.dispatch("login/checkUsername");
+        this.$store.dispatch("login/checkEmail");
+        console.log(this.$store.state)
+        if (
+          this.$store.state.login.existUsername == false &&
+          this.$store.state.login.existEmail == false
+        ) {
+           this.$router.push(this.localePath({ name: "Pricing" }));
+          console.log("success");
+        }
+         else if (this.$store.state.login.existUsername == true ||
+          this.$store.state.login.existEmail == true) {
+            console.log("errorrrrr")
+          Swal.fire({
+            title: this.$t("existError"),
+            icon: "error",
+            confirmButtonText: this.$t("continue"),
+            confirmButtonColor: "red",
+          });
+        }
       }
     },
 

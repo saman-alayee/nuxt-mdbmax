@@ -51,13 +51,6 @@
         </b-dropdown>
       </div>
 
-      <div>
-        <nuxt-link :to="localePath('/')"
-          ><base-button
-            style="font-size: 1rem; margin: 5px"
-            :text="$t('login')"
-        /></nuxt-link>
-      </div>
     </div>
   </nav>
 </template>

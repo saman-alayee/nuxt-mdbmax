@@ -3,7 +3,7 @@ export default {
   server: {
     host: '127.0.0.1' // default: localhost
   },
-  buildDir:'_nuxt',
+  buildDir: '_nuxt',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mdbmax',
@@ -20,7 +20,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', hid: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 
     ]
   },
@@ -102,6 +102,16 @@ export default {
           featureNine: "Advertise Your Business 5M CPM",
           choose: "Choose",
 
+          PremiumPlan1: "Premium Plan: 1 month subscription",
+          PremiumPlan12: "Premium Plan: 12 month subscription",
+          PremiumPlan6: "Premium Plan: 6 month subscription",
+          PremiumPlan3: "Premium Plan: 3 month subscription",
+          PUBPlan1: "Display your business advertising to 5 million users",
+          PUBPlan12: "Display your business advertising to 80 million users",
+          PUBPlan6: "Display your business advertising to 35 million users",
+          PUBPlan3: "Display your business advertising to 16 million users",
+
+
 
 
           headerText: "Select the duration of your plan. Longer plans offer better discounts!",
@@ -129,8 +139,10 @@ export default {
           select: "Select",
           error: "error",
           textError: "Check your form ",
-          okay:"okay",
-          sucess: "success",
+          okay: "okay",
+          successTitle: "Dear user, the purchase transaction has been successfully completed and your account is now activated.",
+          sucess: "While thanking and appreciating your support for purchasing a subscription, please note that the amount you have paid is only used to cover the costs of maintaining and developing the site, and with your support you will see the progress and improvement of the site in the very near future. In case of error or problem, try to contact us by e-mail, so that we can solve it as soon as possible. ",
+          existError: "your email or username is exist",
 
 
           email: "Email address ",
@@ -146,7 +158,7 @@ export default {
         fa: {
           login: 'ورود',
           lan: 'زبان',
-          sucess:"پرداخت موفقیت آمیز بود",
+          sucess: "پرداخت موفقیت آمیز بود",
           stepOne: 'طرح اشتراک',
           stepTwo: 'مدت زمان اشتراک',
           Basic: "اشتراک آزمایشی ",
@@ -158,14 +170,14 @@ export default {
           featureOne: "دسترسی کامل به محتوا",
           featureTwo: "لغو اشتراک در هر زمانی",
           featureThree: "فیلم ها و سریال های نامحدود",
-          featureFour: "دسترسی به کیفیت HD (720p)  ",
+          featureFour: "HD (720p)  دسترسی به کیفیت",
           featureFive: "اولویت در پاسخگویی و پشتیبانی",
           featureSix: "اولویت در پاسخگویی و پشتیبانی 24 ساعته",
-          featureSeven: "دسترسی به همه کیفیت ",
-          featureEight: "بدون تبلیغات",
-          featureFour_permium: "دسترسی به کیفیت HD (1080p) ",
-
-          featureNine: "بیزینس خود را 5 میلیون CPM تبلیغ کنید",
+          featureSeven: " دسترسی  به همه کیفیت ها",
+          featureEight: "بدون تبلیغات در نمایش ویدئو",
+          featureFour_permium: "FULL HD (1080p) دسترسی  به کیفیت ",
+          featureFourplan_permium: "دسترسی به کیفیت  (1080p) FULL HD",
+          featureNine: "نمایش تبلیغ تجارت شما در سایت ",
           choose: "انتخاب اشتراک",
           error: "به مشکل برخوردید",
           textError: "لطفا فرم خود را چک کیند",
@@ -201,7 +213,19 @@ export default {
           username: "نام کاربری",
           password: "رمز عبور ",
           account: " ایجاد حساب کاربری ",
-          continue: "ادامه"
+          continue: "ادامه",
+          existError: "این آدرس ایمیل یا نام کاربری از قبل موجود میباشد",
+          sucess: " ضمن تشکر و قدردانی از حمایت شما بابت خرید اشتراک، توجه داشته باشید که مبلغ پرداختی شما صرفاً برای تامین هزینه های نگهداری سایت و توسعه سایت میباشد و با حمایت شما درآینده بسیار نزدیک شاهد پیشرفت و بهبود سایت خواهید بود. در صورت بروز هرگونه خطا یا مشکل، سعی کنید از طریق ایمیل با ما تماس برقرار کنید، که ما بتوانیم در سریع ترین زمان ممکن آن را حل کنیم."
+          , successTitle: "اربر گرامی تراکنش خرید به خوبی انجام گردید و هم اکنون حساب کاربری شما فعال شد."
+          , PremiumPlan1: "اشتراک ویژه : یک ماه اشتراک ",
+          PremiumPlan12: "اشتراک ویژه : دوزاده ماه اشتراک ",
+          PremiumPlan6: "اشتراک ویژه : شش ماه اشتراک ",
+          PremiumPlan3: "اشتراک ویژه : سه ماه اشتراک ",
+
+          PUBPlan1: "نمایش تبلیغ تجارت شما با 5 میلیون بازدید ",
+          PUBPlan12: "نمایش تبلیغ تجارت شما با 80 میلیون بازدید ",
+          PUBPlan6: "نمایش تبلیغ تجارت شما با 35 میلیون بازدید ",
+          PUBPlan3: "نمایش تبلیغ تجارت شما با 16 میلیون بازدید ",
 
 
         },
@@ -212,6 +236,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath:'_nuxt/dist/'
+    publicPath: '_nuxt/dist/'
   }
 }

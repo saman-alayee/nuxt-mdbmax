@@ -195,7 +195,7 @@
               <p>&#10003; {{ $t("featureSix") }}</p>
                <p>&#10003; {{ $t("featureSeven") }}</p>
                 <p>&#10003; {{ $t("featureEight") }}</p>
-                 <p>&#10003; {{ $t("featureNine") }}</p>
+                 <!-- <p>&#10003; {{ $t("featureNine") }}</p> -->
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
@@ -241,8 +241,18 @@ export default {
       this.$store.dispatch("login/loadItems");
     },
     handleInput(event) {
-      this.text_plan = event.target.value.split("-")[2];
-      console.log(event.target);
+      if(event.target.value.split("-")[2] == 'Business PUB Plan'){
+        this.text_plan = this.$t("PUBPlan1");
+      }
+      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 3 month subscription & 16M CPM'){
+        this.text_plan = this.$t("PUBPlan3");
+      }
+      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 6 month subscription & 35M CPM'){
+        this.text_plan = this.$t("PUBPlan6");
+      }
+      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 12 month subscription & 80M CPM'){
+        this.text_plan = this.$t("PUBPlan12");
+      }
     },
   },
 };

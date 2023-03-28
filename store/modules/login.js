@@ -9,7 +9,9 @@ const data = {
         password: "",
         productID: "",
         nameID: "",
-        respone: ""
+        respone: "",
+        existUsername: '',
+        existEmail:'',
     },
     mutations: {
         setUsername(state, username) {
@@ -29,10 +31,67 @@ const data = {
         },
         setRespone(state, respone) {
             state.respone = respone
-        }
+        },
+        setexistUsername(state, existUsername) {
+            state.existUsername = existUsername
+        },
+        setexistEmail(state, existEmail) {
+            state.existEmail = existEmail
+        },
 
     },
     actions: {
+        checkUsername({ commit, state }) {
+            axios
+                .get(`https://urlg.eu/wp-json/rcp/v1/members?s=${state.username}`, {
+                    headers: {
+                        Authorization:"Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
+                    }
+                })
+                .then((res) => {
+                    console.log(res.data)
+                    if (res.data[0]){
+                        commit('setexistUsername', true)
+                        console.log("true")
+                    }
+                    else{
+                        commit('setexistUsername', false)
+                        console.log("false")
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                    state.existUsername == false
+
+                });
+        },
+        checkEmail({ commit, state }) {
+            axios
+                .get(`https://urlg.eu/wp-json/rcp/v1/members?s=${state.email}`, {
+                    headers: {
+                        Authorization: "Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
+                    }
+                })
+                .then((res) => {
+
+                    if (res.data[0]) {
+                        commit('setexistEmail', true)
+                        console.log("true")
+                    }
+                    else {
+                        commit('setexistEmail', false)
+                        console.log("false")
+
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        },
+
+
+
+
         loadItems({ commit, state }) {
             axios
                 .post("http://217.160.144.202:8080/api/create-checkout-session/", {
@@ -96,13 +155,14 @@ const data = {
         },
 
 
-        // save in store 
+        // save auth data in store 
         setItems({ commit }, { email, password, username }) {
             commit('setUsername', username)
             commit('setEmail', email)
             commit('setPassword', password)
 
         },
+        // set product data in store
         setId({ commit }, { productID, nameID }) {
             commit('setproductID', productID)
             commit('setnameID', nameID)
@@ -112,27 +172,6 @@ const data = {
 
     },
     // getters: {
-    //     loadedToken(state) {
-    //         return state.token
-    //     },
 
-    // }
-    // axios
-    //             .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
-
-    //     username: JSON.parse(localStorage.getItem('username')),
-    //     password: JSON.parse(localStorage.getItem('password')),
-
-    // })
-    //     .then((res) => {
-    //         console.log(res.data)
-    //         commit('setRespone', res.data.url)
-
-    //     })
-    //     .catch((err) => {
-
-    //         console.log(err);
-
-    //     });
 }
 export default data;

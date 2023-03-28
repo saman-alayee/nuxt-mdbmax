@@ -3,7 +3,8 @@
     <BaseCard>
       <template slot="content">
         <div>
-          <p class="text-primary text-center h2">{{ $t("sucess") }}</p>
+          <h5 class="text-light text-justify" :dir="$dir()">{{ $t("successTitle") }}</h5>
+          <p class="text-light text-justify" :dir="$dir()">{{ $t("sucess") }}</p>
         </div>
         <div class="d-flex justify-content-center mt-5">
           <base-button :text="$t('continue')" @click="callSuccess" />

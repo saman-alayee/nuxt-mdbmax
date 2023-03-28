@@ -48,8 +48,7 @@
                   name="exampleRadios"
                   @input="handleInput"
                   id="exampleRadios2"
-                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF-Premium Plan: 3 month subscription
-"
+                  value="4-tSwFGj9l9jv9ZnDefxkzY9pRhajKB3Wq5KCF-Premium Plan: 3 month subscription"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios2">
@@ -62,8 +61,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios3"
-                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE-Premium Plan: 6 month subscription
-"
+                  value="5-3auFdJK1JuVPeRvXdJGpU71xRK45mHA46cOE-Premium Plan: 6 month subscription"
                   v-model="product"
                   @input="handleInput"
                 />
@@ -195,7 +193,7 @@
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
               <p>&#10003; {{ $t("featureFive") }}</p>
-              <p>&#10003; {{ $t("featureFour_permium") }}</p>
+              <p>&#10003; {{ $t("featureFourplan_permium") }}</p>
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
@@ -242,8 +240,19 @@ export default {
       this.$store.dispatch("login/loadItems");
     },
     handleInput(event) {
-      this.text_plan = event.target.value.split("-")[2];
-      console.log(event.target);
+      if(event.target.value.split("-")[2] == 'Premium Plan: 1 month subscription'){
+        this.text_plan = this.$t("PremiumPlan1");
+      }
+      else if(event.target.value.split("-")[2] == 'Premium Plan: 3 month subscription'){
+        this.text_plan = this.$t("PremiumPlan3");
+      }
+      else if(event.target.value.split("-")[2] == 'Premium Plan: 6 month subscription'){
+        this.text_plan = this.$t("PremiumPlan6");
+      }
+      else if(event.target.value.split("-")[2] == 'Premium Plan: 12 month subscription'){
+        this.text_plan = this.$t("PremiumPlan12");
+      }
+      // this.text_plan = event.target.value.split("-")[2];
     },
   },
 };
