@@ -98,8 +98,8 @@ export default {
           featureFive: "Priority in Support",
           featureSix: "Priority Support in 24H",
           featureSeven: "Resolution Access 4K+HDR",
-          featureEight: "No Advertisements",
-          featureNine: "Advertise Your Business 5M CPM",
+          featureEight: "No Advertisements in videos",
+          featureNine: "Advertise Your Business",
           choose: "Choose",
 
           PremiumPlan1: "Premium Plan: 1 month subscription",
