@@ -94,7 +94,7 @@ const data = {
 
         loadItems({ commit, state }) {
             axios
-                .post("http://217.160.144.202:8080/api/create-checkout-session/", {
+                .post("https://billing.mdbmax.com:8080/api/create-checkout-session/", {
 
                     nameID: state.nameID,
                 })
@@ -114,7 +114,7 @@ const data = {
 
         sendData({ commit, state }) {
             axios
-                .post("http://217.160.144.202:8080/api/success/", {
+                .post("https://billing.mdbmax.com:8080/api/success/", {
 
                     password: JSON.parse(localStorage.getItem('password')),
                     username: JSON.parse(localStorage.getItem('username')),
