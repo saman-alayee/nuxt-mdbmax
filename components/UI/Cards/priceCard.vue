@@ -42,7 +42,7 @@
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
-            <h3 style="color: var(--yellow)">{{ title }}</h3>
+            <h3>{{ title }}</h3>
             <h5 class="text-muted">{{ price }}</h5>
           </div>
           <div class="text--card mt-4">
