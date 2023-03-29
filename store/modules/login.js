@@ -45,7 +45,7 @@ const data = {
             axios
                 .get(`https://benameiran.golf/rcp/v1/members?s=${state.username}`, {
                     headers: {
-                        Authorization:"Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
+                        Authorization:"Basic QGRtaW46aGZLSyBFZVF4IDliSHogdGtidiBwYWVQIFhjMFjigI8K4oCP"
                     }
                 })
                 .then((res) => {
@@ -69,7 +69,7 @@ const data = {
             axios
                 .get(`https://benameiran.golf/rcp/v1/members?s=${state.email}`, {
                     headers: {
-                        Authorization: "Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
+                        Authorization: "Basic QGRtaW46aGZLSyBFZVF4IDliSHogdGtidiBwYWVQIFhjMFjigI8K4oCP"
                     }
                 })
                 .then((res) => {
