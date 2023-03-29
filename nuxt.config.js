@@ -37,6 +37,8 @@ export default {
     '@/plugins/bootstrap-vue', '~/plugins/i18n.js',
 
   ],
+  
+
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -88,16 +90,17 @@ export default {
           Premium: "Premium",
           Business: "Business PUB",
           basicTime: "$2.00 / day",
-          permiumTime: "$4.99 / month",
-          businessTime: "$99.00 / month",
+          permiumTime: "$2.50 / month",
+          businessTime: "$64.35 / month",
           featureOne: "Access to Full Content",
           featureTwo: "Cancel Anytime",
           featureThree: "Unlimited movies and TV shows",
           featureFour: "Resolution Access HD (720p)",
           featureFour_permium: "Resolution Access Full HD (1080p)",
+          featureFourplan_permium:"Resolution Access Full HD (1080p)",
           featureFive: "Priority in Support",
           featureSix: "Priority Support in 24H",
-          featureSeven: "Resolution Access 4K+HDR",
+          featureSeven: "Access all resolution",
           featureEight: "No Advertisements in videos",
           featureNine: "Advertise Your Business",
           choose: "Choose",
@@ -144,6 +147,12 @@ export default {
           sucess: "While thanking and appreciating your support for purchasing a subscription, please note that the amount you have paid is only used to cover the costs of maintaining and developing the site, and with your support you will see the progress and improvement of the site in the very near future. In case of error or problem, try to contact us by e-mail, so that we can solve it as soon as possible. ",
           existError: "your email or username is exist",
 
+          emailError: "please enter your correct Email",
+          usernameError: "Please enter your username",
+          passwordError: "Your password must not be less than 8 characters.",
+          planError: "Please select the subscription you want",
+
+
 
           email: "Email address ",
           username: "Username",
@@ -182,6 +191,7 @@ export default {
           error: "به مشکل برخوردید",
           textError: "لطفا فرم خود را چک کیند",
           okay: "باشه",
+          featureTextbasic_plan: "اشتراک آزمایشی",
 
           trustText_one: "در هنگام پرداخت ایمیل واقعی خود را وارد کنید، که اگر تراکنش مالی به مشکل خورد ما بتوانیم از طریق ایمیل شما پیگیری کنیم.",
           trustText_two: "در صورت انصراف مبلغ پرداختی شما با کسر استفاده روزانه شما، حداکثر ظرف 14 روز به حساب شما بازگردانده خواهد شد.",
@@ -216,7 +226,7 @@ export default {
           continue: "ادامه",
           existError: "این آدرس ایمیل یا نام کاربری از قبل موجود میباشد",
           sucess: " ضمن تشکر و قدردانی از حمایت شما بابت خرید اشتراک، توجه داشته باشید که مبلغ پرداختی شما صرفاً برای تامین هزینه های نگهداری سایت و توسعه سایت میباشد و با حمایت شما درآینده بسیار نزدیک شاهد پیشرفت و بهبود سایت خواهید بود. در صورت بروز هرگونه خطا یا مشکل، سعی کنید از طریق ایمیل با ما تماس برقرار کنید، که ما بتوانیم در سریع ترین زمان ممکن آن را حل کنیم."
-          , successTitle: "اربر گرامی تراکنش خرید به خوبی انجام گردید و هم اکنون حساب کاربری شما فعال شد."
+          , successTitle: "کاربر گرامی تراکنش خرید به خوبی انجام گردید و هم اکنون حساب کاربری شما فعال شد."
           , PremiumPlan1: "اشتراک ویژه : یک ماه اشتراک ",
           PremiumPlan12: "اشتراک ویژه : دوزاده ماه اشتراک ",
           PremiumPlan6: "اشتراک ویژه : شش ماه اشتراک ",
@@ -226,7 +236,10 @@ export default {
           PUBPlan12: "نمایش تبلیغ تجارت شما با 80 میلیون بازدید ",
           PUBPlan6: "نمایش تبلیغ تجارت شما با 35 میلیون بازدید ",
           PUBPlan3: "نمایش تبلیغ تجارت شما با 16 میلیون بازدید ",
-
+          emailError:"لطفا ایمیل خود را وارد کنید",
+          usernameError:"نام کاربری خود را لطفا وارد کنید . حروف فارسی مجاز نمی باشد .",
+          passwordError:"رمز عبور شما باید شما نباید از 8 حرف کمتر باشد.",
+          planError:"لطفا اشتراک مورد نظر خود را انتخاب کنید",
 
         },
 

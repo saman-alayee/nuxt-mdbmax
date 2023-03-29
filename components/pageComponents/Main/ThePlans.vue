@@ -28,6 +28,8 @@
         :feature_seven="card.feature_seven"
         :border-top="card.boderTop"
         :link="card.link"
+        :basic="card.basic"
+        :image="card.image"
       />
     </div>
   </div>
@@ -55,6 +57,8 @@ export default {
           feature_six: "",
           boderTop: false,
           link: "basicPlan",
+          basic: true,
+          image:"2.png"
         },
         {
           title: this.$t("Premium"),
@@ -67,6 +71,7 @@ export default {
           feature_six: "",
           boderTop: true,
           link: "permiumPlan",
+          image:"64.png"
         },
         {
           title: this.$t("Business"),
@@ -80,6 +85,7 @@ export default {
           feature_seven: this.$t("featureNine"),
           boderTop: false,
           link: "businessPlan",
+          image:"64.png"
         },
       ],
     };

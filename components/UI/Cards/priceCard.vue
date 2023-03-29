@@ -4,7 +4,7 @@
       v-if="borderTop"
       style="
         border-top: 5px solid var(--yellow);
-        height: 40rem;
+        height: 44rem;
         margin-top: -2rem;
       "
     >
@@ -32,10 +32,40 @@
                 outline="true"
             /></nuxt-link>
           </div>
+          <div class="img-container mt-5 m-2 pt-5">
+            <img src="@/assets/images/2.50.png" width="320px" alt="" />
+          </div>
         </div>
       </template>
     </base-card>
-    <base-card v-else style="height: 34rem">
+    <base-card v-else-if="basic" style="height: 42rem">
+      <template slot="content">
+        <div class="text-container">
+          <div class="title--card">
+            <h3 style="color: var(--yellow)">{{ title }}</h3>
+            <h5 class="text-muted">{{ price }}</h5>
+          </div>
+          <div class="text--card mt-4">
+            <p>{{ feature_one }}</p>
+            <p>{{ feature_two }}</p>
+            <p>{{ feature_three }}</p>
+            <p>{{ feature_four }}</p>
+            <p>{{ feature_five }}</p>
+            <p>{{ feature_six }}</p>
+            <p>{{ feature_seven }}</p>
+          </div>
+          <div class="btn-container mt-4">
+            <nuxt-link :to="localePath(`/Pricing/${link}`)">
+              <BaseButton :text="$t('choose')" outline="true"
+            /></nuxt-link>
+          </div>
+          <div class="img-container" style="margin-top:8rem">
+            <img :src="require(`@/assets/images/${image}`)" width="320px" alt="" />
+          </div>
+        </div>
+      </template>
+    </base-card>
+    <base-card v-else style="height: 42rem">
       <template slot="content">
         <div class="text-container">
           <div class="title--card">
@@ -55,6 +85,13 @@
             <nuxt-link :to="localePath(`/Pricing/${link}`)">
               <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
+          </div>
+          <div class="img-container mt-2">
+            <img
+              :src="require(`@/assets/images/${image}`)"
+              width="320px"
+              alt=""
+            />
           </div>
         </div>
       </template>
@@ -118,13 +155,21 @@ export default {
       type: String,
       require: true,
     },
+    image: {
+      type: String,
+      require: true,
+    },
+    basic: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style scoped>
 .price-card-container {
-margin-top: 4rem;
+  margin-top: 4rem;
 }
 .text-container {
   display: flex;
@@ -140,11 +185,9 @@ margin-top: 4rem;
 }
 @media (max-width: 768px) {
   .price-card-container {
-       margin-left: 10px;
+    margin-left: 15px;
     width: 20rem;
-    margin-top:0rem;
+    margin-top: 0rem;
   }
 }
-
-
 </style>

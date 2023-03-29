@@ -16,6 +16,13 @@
           <div class="alert alert-warning mt-4" role="alert">
             {{ $t("trustText_one") }}
           </div>
+          <div v-if="errors.length !== 0" class="alert alert-danger mt-4" role="alert">
+            {{ errors[0] }}
+            <br>
+            {{ errors[1] }}
+            <br>
+            {{ errors[2] }}
+          </div>
           <div class="form-group">
             <label :dir="$dir()" for="exampleInputEmail1">{{
               $t("username")
@@ -73,6 +80,7 @@ export default {
       username: "",
       email: "",
       password: "",
+      errors: [],
     };
   },
   methods: {
@@ -84,12 +92,16 @@ export default {
         !/^[^@]+@\w+(\.\w+)+\w$/.test(this.email) ||
         this.password.length < 8
       ) {
-        Swal.fire({
-          title: this.$t("textError"),
-          icon: "error",
-          confirmButtonText: this.$t("continue"),
-          confirmButtonColor: "red",
-        });
+        this.errors = [];
+        if (!/^[^@]+@\w+(\.\w+)+\w$/.test(this.email)) {
+          this.errors.push(this.$t("emailError"));
+        }
+        if (this.username == "") {
+          this.errors.push(this.$t("usernameError"));
+        }
+        if (this.password.length < 8) {
+          this.errors.push(this.$t("passwordError"));
+        }
       } else {
         localStorage.setItem("username", JSON.stringify(this.username));
         localStorage.setItem("email", JSON.stringify(this.email));
@@ -101,19 +113,18 @@ export default {
         });
         this.$store.dispatch("login/checkUsername");
         this.$store.dispatch("login/checkEmail");
-        console.log(this.$store.state)
         if (
           this.$store.state.login.existUsername == false &&
           this.$store.state.login.existEmail == false
         ) {
-           this.$router.push(this.localePath({ name: "Pricing" }));
-          console.log("success");
-        }
-         else if (this.$store.state.login.existUsername == true ||
-          this.$store.state.login.existEmail == true) {
-            console.log("errorrrrr")
+          this.$router.push(this.localePath({ name: "Pricing" }));
+        } else if (
+          this.$store.state.login.existUsername == true ||
+          this.$store.state.login.existEmail == true
+        ) {
+          
           Swal.fire({
-            title: this.$t("existError"),
+            text: this.$t("existError"),
             icon: "error",
             confirmButtonText: this.$t("continue"),
             confirmButtonColor: "red",

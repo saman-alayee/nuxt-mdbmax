@@ -21,7 +21,7 @@
       <template slot="content">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-           <div style="text-align: justify">
+            <div style="text-align: justify">
               <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
@@ -34,7 +34,7 @@
                   name="exampleRadios"
                   @input="handleInput"
                   id="exampleRadios1"
-                  value="7-6JvVP0jtQ3KbyywZcaEqdVucpoYQtmt5yQyN-Business PUB Plan" 
+                  value="7-6JvVP0jtQ3KbyywZcaEqdVucpoYQtmt5yQyN-Business PUB Plan"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
@@ -193,16 +193,20 @@
               <p>&#10003; {{ $t("featureTwo") }}</p>
               <p>&#10003; {{ $t("featureThree") }}</p>
               <p>&#10003; {{ $t("featureSix") }}</p>
-               <p>&#10003; {{ $t("featureSeven") }}</p>
-                <p>&#10003; {{ $t("featureEight") }}</p>
-                 <!-- <p>&#10003; {{ $t("featureNine") }}</p> -->
+              <p>&#10003; {{ $t("featureSeven") }}</p>
+              <p>&#10003; {{ $t("featureEight") }}</p>
+              <!-- <p>&#10003; {{ $t("featureNine") }}</p> -->
             </div>
             <hr class="bg-light" />
             <div class="d-flex protect-card">
               <div class="p-1">
-                <img src="@/assets/images/payment.png" width="80px" alt="SSL logo" />
+                <img
+                  src="@/assets/images/payment.png"
+                  width="80px"
+                  alt="SSL logo"
+                />
               </div>
-               <div class="p-1" style="text-align: justify;" :dir="$dir()">
+              <div class="p-1" style="text-align: justify" :dir="$dir()">
                 <h6>{{ $t("SSL_header") }}</h6>
                 <p>{{ $t("SSL") }}</p>
               </div>
@@ -217,6 +221,7 @@
 <script>
 import BaseCard from "../../UI/Cards/baseCard.vue";
 import BaseButton from "../../UI/Button/baseButton.vue";
+import Swal from "sweetalert2";
 
 export default {
   components: { BaseCard, BaseButton },
@@ -230,27 +235,42 @@ export default {
   },
   methods: {
     setProduct() {
-      this.productID = parseInt(this.product.split("-")[0]);
-      this.nameID = this.product.split("-")[1];
-      localStorage.setItem("productID", JSON.stringify(this.productID));
-      localStorage.setItem("nameID", JSON.stringify(this.nameID));
-      this.$store.dispatch("login/setId", {
-        productID: this.productID,
-        nameID: this.nameID,
-      });
-      this.$store.dispatch("login/loadItems");
+      if (this.product !== "") {
+        this.productID = parseInt(this.product.split("-")[0]);
+        this.nameID = this.product.split("-")[1];
+        localStorage.setItem("productID", JSON.stringify(this.productID));
+        localStorage.setItem("nameID", JSON.stringify(this.nameID));
+        this.$store.dispatch("login/setId", {
+          productID: this.productID,
+          nameID: this.nameID,
+        });
+        this.$store.dispatch("login/loadItems");
+      } else {
+        Swal.fire({
+          text: this.$t("planError"),
+          icon: "error",
+          confirmButtonText: this.$t("continue"),
+          confirmButtonColor: "red",
+        });
+      }
     },
     handleInput(event) {
-      if(event.target.value.split("-")[2] == 'Business PUB Plan'){
+      if (event.target.value.split("-")[2] == "Business PUB Plan") {
         this.text_plan = this.$t("PUBPlan1");
-      }
-      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 3 month subscription & 16M CPM'){
+      } else if (
+        event.target.value.split("-")[2] ==
+        "Business PUB Plan: 3 month subscription & 16M CPM"
+      ) {
         this.text_plan = this.$t("PUBPlan3");
-      }
-      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 6 month subscription & 35M CPM'){
+      } else if (
+        event.target.value.split("-")[2] ==
+        "Business PUB Plan: 6 month subscription & 35M CPM"
+      ) {
         this.text_plan = this.$t("PUBPlan6");
-      }
-      else if(event.target.value.split("-")[2] == 'Business PUB Plan: 12 month subscription & 80M CPM'){
+      } else if (
+        event.target.value.split("-")[2] ==
+        "Business PUB Plan: 12 month subscription & 80M CPM"
+      ) {
         this.text_plan = this.$t("PUBPlan12");
       }
     },
@@ -363,7 +383,7 @@ input[type="radio"] {
 label {
   font-size: 16px;
 }
-.text-justify{
+.text-justify {
   text-align: justify;
 }
 </style>

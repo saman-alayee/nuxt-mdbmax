@@ -94,7 +94,7 @@ const data = {
 
         loadItems({ commit, state }) {
             axios
-                .post("localhost:8080/api/create-checkout-session/", {
+                .post("https://billing.mdbmax.com/test/api/create-checkout-session/", {
 
                     nameID: state.nameID,
                 })
@@ -114,17 +114,17 @@ const data = {
 
         sendData({ commit, state }) {
             axios
-                .post("localhost:8080/api/success/", {
+                .post("https://billing.mdbmax.com/test/api/success/", {
 
-                    password: JSON.parse(localStorage.getItem('password')),
-                    username: JSON.parse(localStorage.getItem('username')),
-                    email: JSON.parse(localStorage.getItem('email')),
-                    productID: JSON.parse(localStorage.getItem('productID')),
+                    password: JSON.parse(localStorage.getItem("password")),
+                    username: JSON.parse(localStorage.getItem("username")),
+                    email: JSON.parse(localStorage.getItem("email")),
+                    productID: JSON.parse(localStorage.getItem("productID")),
                 })
                 .then((res) => {
                     console.log(res.data)
                     commit('setRespone', res.data.url)
-                    window.location.href = 'https://urlg.eu/';
+                    
 
 
                 })

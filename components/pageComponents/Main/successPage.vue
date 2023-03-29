@@ -3,11 +3,15 @@
     <BaseCard>
       <template slot="content">
         <div>
-          <h5 class="text-light text-justify" :dir="$dir()">{{ $t("successTitle") }}</h5>
-          <p class="text-light text-justify" :dir="$dir()">{{ $t("sucess") }}</p>
+          <h5 class="text-light text-justify" :dir="$dir()">
+            {{ $t("successTitle") }}
+          </h5>
+          <p class="text-light text-justify" :dir="$dir()">
+            {{ $t("sucess") }}
+          </p>
         </div>
         <div class="d-flex justify-content-center mt-5">
-          <base-button :text="$t('continue')" @click="callSuccess" />
+          <base-button :text="$t('continue')" outline= false @click="callSuccess" />
         </div>
       </template>
     </BaseCard>
@@ -21,10 +25,13 @@ export default {
   components: { BaseCard, BaseButton },
   methods: {
     callSuccess() {
-      this.$store.dispatch("login/sendData");
+      window.location.href = 'https://urlg.eu/';
     },
   },
-  
+  mounted() {
+    this.$store.dispatch("login/sendData");
+    console.log("sssssssssssssssssssssssssssssss")
+  },
 };
 </script>
 

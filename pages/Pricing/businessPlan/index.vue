@@ -8,7 +8,14 @@
 import businessPlan from '../../../components/pageComponents/Main/businessPlan.vue';
 
 export default {
-    components: { businessPlan }
+    components: { businessPlan },
+         middleware({ store, redirect }) {
+    // If the user is not authenticated
+    if (!store.state.login.email) {
+      return redirect("/");
+    }
+  },
+
 }
 </script>
 
