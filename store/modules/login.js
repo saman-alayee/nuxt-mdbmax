@@ -43,7 +43,7 @@ const data = {
     actions: {
         checkUsername({ commit, state }) {
             axios
-                .get(`https://urlg.eu/wp-json/rcp/v1/members?s=${state.username}`, {
+                .get(`https://benameiran.golf/rcp/v1/members?s=${state.username}`, {
                     headers: {
                         Authorization:"Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
                     }
@@ -67,7 +67,7 @@ const data = {
         },
         checkEmail({ commit, state }) {
             axios
-                .get(`https://urlg.eu/wp-json/rcp/v1/members?s=${state.email}`, {
+                .get(`https://benameiran.golf/rcp/v1/members?s=${state.email}`, {
                     headers: {
                         Authorization: "Basic c29iaGFuMGEwQGdtYWlsLmNvbTpiNmdiIEt0RnQgWGJYeiAzbWhBIHJ4ZGggV2VROA=="
                     }
@@ -136,7 +136,7 @@ const data = {
         },
         sendAuth({ commit, state }) {
             axios
-                .post("https://urlg.eu/wp-json/jwt-auth/v1/token", {
+                .post("https://benameiran.golf/wp-json/jwt-auth/v1/token", {
 
                     username: JSON.parse(localStorage.getItem('username')),
                     password: JSON.parse(localStorage.getItem('password')),

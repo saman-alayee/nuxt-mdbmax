@@ -25,12 +25,11 @@ export default {
   components: { BaseCard, BaseButton },
   methods: {
     callSuccess() {
-      window.location.href = 'https://urlg.eu/';
+      window.location.href = 'https://benameiran.golf/';
     },
   },
   mounted() {
     this.$store.dispatch("login/sendData");
-    console.log("sssssssssssssssssssssssssssssss")
   },
 };
 </script>
