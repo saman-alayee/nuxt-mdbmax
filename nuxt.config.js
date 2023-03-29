@@ -109,10 +109,10 @@ export default {
           PremiumPlan12: "Premium Plan: 12 month subscription",
           PremiumPlan6: "Premium Plan: 6 month subscription",
           PremiumPlan3: "Premium Plan: 3 month subscription",
-          PUBPlan1: "Display your business advertising to 5 million users",
-          PUBPlan12: "Display your business advertising to 80 million users",
-          PUBPlan6: "Display your business advertising to 35 million users",
-          PUBPlan3: "Display your business advertising to 16 million users",
+          PUBPlan1: "Display your business advertising to 5 million views",
+          PUBPlan12: "Display your business advertising to 80 million views",
+          PUBPlan6: "Display your business advertising to 35 million views",
+          PUBPlan3: "Display your business advertising to 16 million views",
 
 
 
@@ -174,8 +174,8 @@ export default {
           Premium: "اشتراک ویژه ",
           Business: "اشتراک تجاری",
           basicTime: "$2.00 / روزانه",
-          permiumTime: "$4.99 / ماهانه",
-          businessTime: "$99.00 / ماهانه",
+          permiumTime: "$2.50 / ماهانه",
+          businessTime: "$64.35 / ماهانه",
           featureOne: "دسترسی کامل به محتوا",
           featureTwo: "لغو اشتراک در هر زمانی",
           featureThree: "فیلم ها و سریال های نامحدود",
@@ -228,7 +228,7 @@ export default {
           sucess: " ضمن تشکر و قدردانی از حمایت شما بابت خرید اشتراک، توجه داشته باشید که مبلغ پرداختی شما صرفاً برای تامین هزینه های نگهداری سایت و توسعه سایت میباشد و با حمایت شما درآینده بسیار نزدیک شاهد پیشرفت و بهبود سایت خواهید بود. در صورت بروز هرگونه خطا یا مشکل، سعی کنید از طریق ایمیل با ما تماس برقرار کنید، که ما بتوانیم در سریع ترین زمان ممکن آن را حل کنیم."
           , successTitle: "کاربر گرامی تراکنش خرید به خوبی انجام گردید و هم اکنون حساب کاربری شما فعال شد."
           , PremiumPlan1: "اشتراک ویژه : یک ماه اشتراک ",
-          PremiumPlan12: "اشتراک ویژه : دوزاده ماه اشتراک ",
+          PremiumPlan12: "اشتراک ویژه : دوازده ماه اشتراک ",
           PremiumPlan6: "اشتراک ویژه : شش ماه اشتراک ",
           PremiumPlan3: "اشتراک ویژه : سه ماه اشتراک ",
 
