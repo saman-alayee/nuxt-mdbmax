@@ -25,7 +25,7 @@ export default {
   components: { BaseCard, BaseButton },
   methods: {
     callSuccess() {
-      window.location.href = 'https://benameiran.golf/';
+      window.location.href = 'https://benameiran.golf/login/';
     },
   },
   mounted() {
