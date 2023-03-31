@@ -22,6 +22,19 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div style="text-align: justify">
+              <div
+                v-if="errors.length !== 0"
+                class="alert alert-danger mt-4"
+                role="alert"
+              >
+                {{ errors[0] }}
+                <br />
+                {{ errors[1] }}
+                <br />
+                {{ errors[2] }}
+                <br />
+                {{ errors[3] }}
+              </div>
               <p class="header-text" :dir="$dir()">
                 {{ $t("headerText") }}
               </p>
@@ -34,7 +47,7 @@
                   name="exampleRadios"
                   @input="handleInput"
                   id="exampleRadios1"
-                  value="7-6JvVP0jtQ3KbyywZcaEqdVucpoYQtmt5yQyN-Business PUB Plan"
+                  value="7_6JvVP0jtQ3KbyywZcaEqdVucpoYQtmt5yQyN_Business PUB Plan_99.00_P-2A733149PG9396937MQS6FAY"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
@@ -48,7 +61,7 @@
                   @input="handleInput"
                   name="exampleRadios"
                   id="exampleRadios2"
-                  value="8-W1UIqwhUBxL6UViryNZTqoVmPFpyzVD5U0Yk-Business PUB Plan: 3 month subscription & 16M CPM"
+                  value="8_W1UIqwhUBxL6UViryNZTqoVmPFpyzVD5U0Yk_Business PUB Plan: 3 month subscription & 16M CPM_89.10_P-5G466682S4798670YMQS6HAY"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios2">
@@ -62,7 +75,7 @@
                   @input="handleInput"
                   name="exampleRadios"
                   id="exampleRadios3"
-                  value="9-CfL26TqUjJJ1uhFDxZ7ocOJmeHxKQEQ0K4LP-Business PUB Plan: 6 month subscription & 35M CPM"
+                  value="9_CfL26TqUjJJ1uhFDxZ7ocOJmeHxKQEQ0K4LP_Business PUB Plan: 6 month subscription & 35M CPM_74.25_P-8GX29164HJ6390938MQS6LCA"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios3">
@@ -76,7 +89,7 @@
                   @input="handleInput"
                   name="exampleRadios"
                   id="exampleRadios4"
-                  value="10-cmN3G7OKds7ZMZIS8FNK6818efJ3VkBnc8rC-Business PUB Plan: 12 month subscription & 80M CPM"
+                  value="10_cmN3G7OKds7ZMZIS8FNK6818efJ3VkBnc8rC_Business PUB Plan: 12 month subscription & 80M CPM_64.35_PROD-50606011XH6051821"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios4">
@@ -84,9 +97,6 @@
                 </label>
               </div>
               <div class="mt-5" style="text-align: justify">
-                <p :dir="$dir()">
-                  {{ $t("trustText_one") }}
-                </p>
                 <p :dir="$dir()">
                   {{ $t("trustText_two") }}
                 </p>
@@ -97,6 +107,50 @@
                   {{ $t("trustText_four") }}
                 </p>
               </div>
+            </div>
+            <div class="text-justify" :dir="$dir()">
+              <form class="p-1">
+                <h4>{{ $t("account") }}</h4>
+                <div class="alert alert-warning mt-4" role="alert">
+                  {{ $t("trustText_one") }}
+                </div>
+
+                <div class="form-group">
+                  <label :dir="$dir()" for="exampleInputEmail1">{{
+                    $t("username")
+                  }}</label>
+                  <input
+                    type="text"
+                    class="form-control input-style"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    v-model="username"
+                  />
+                </div>
+                <div class="form-group">
+                  <label :dir="$dir()" for="exampleInputEmail1">{{
+                    $t("email")
+                  }}</label>
+                  <input
+                    type="email"
+                    class="form-control input-style"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    v-model="email"
+                  />
+                </div>
+                <div class="form-group" :dir="$dir()">
+                  <label :dir="$dir()" for="exampleInputPassword1">{{
+                    $t("password")
+                  }}</label>
+                  <input
+                    type="password"
+                    class="form-control input-style"
+                    id="exampleInputPassword1"
+                    v-model="password"
+                  />
+                </div>
+              </form>
             </div>
             <div class="btn-end">
               <nuxt-link :to="localePath('/Pricing')">
@@ -112,8 +166,36 @@
                 textColor="var(--white)"
                 outline="true"
                 :text="$t('continue')"
-                @click="setProduct"
+                @click="storeData"
               />
+            </div>
+            <hr />
+            <div v-if="factor == true" class="price-container">
+              <div class="d-flex justify-content-between">
+                <p>Total</p>
+                <p>${{ paypal_price }}</p>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <no-ssr>
+                  <paypal-checkout
+                    :amount="paypal_price"
+                    :button-style="myStyle"
+                    :invoice-number="paypal_id"
+                    :client="paypal"
+                  >
+                  </paypal-checkout>
+                </no-ssr>
+                <base-button
+                  class="w-100 px-2"
+                  style="height: 45px"
+                  backgroundColor="var(--yellow)"
+                  textColor="var(--white)"
+                  outline="true"
+                  text="Pay with Stripe"
+                  @click="goStripe"
+                />
+              </div>
             </div>
           </div>
           <div class="d-flex verticalLine" style="width: 60px"></div>
@@ -227,31 +309,94 @@ export default {
   components: { BaseCard, BaseButton },
   data() {
     return {
+      factor: false,
+      paypal_id: "",
+      paypal_price: "",
       product: "",
       productID: "",
       nameID: "",
-      text_plan: "",
+      username: "",
+      email: "",
+      password: "",
+      errors: [],
+      paypal: {
+        sandbox:
+          "AUH9w8WPfW10a6u1SCZkX8KktgLTQ6mEs-tAc5H8r7mpxH-mfgQsz6XM1h0-u6cKLgNGLuNKsnfPJOmw",
+        production:
+          "AQDUkIOEEB1ic6y8JOalAcd_i6p9h_jzp7xmpEz4TYwGJrn_M4KIQkngGycNtEbrB64rPoVAGF7jmcTY",
+      },
+      myStyle: {
+        size: "large",
+        shape: "rect",
+        color: "blue",
+      },
     };
   },
   methods: {
-    setProduct() {
-      if (this.product !== "") {
-        this.productID = parseInt(this.product.split("-")[0]);
-        this.nameID = this.product.split("-")[1];
+    goStripe() {
+      this.$store.dispatch("login/loadItems");
+    },
+    storeData() {
+      if (
+        this.username == "" ||
+        this.password == "" ||
+        this.email == "" ||
+        !/^[^@]+@\w+(\.\w+)+\w$/.test(this.email) ||
+        this.password.length < 8 ||
+        this.product == ""
+      ) {
+        this.errors = [];
+        if (!/^[^@]+@\w+(\.\w+)+\w$/.test(this.email)) {
+          this.errors.push(this.$t("emailError"));
+        }
+        if (!/^([a-zA-Z0-9]+)$/.test(this.email)) {
+          this.errors.push(this.$t("usernameError"));
+        }
+        if (this.password.length < 8) {
+          this.errors.push(this.$t("passwordError"));
+        }
+        if (this.product == "") {
+          this.errors.push(this.$t("planError"));
+        }
+      } else {
+        this.factor = true;
+        this.paypal_price = parseInt(this.product.split("_")[3]);
+        this.paypal_id = (this.product.split("_")[4]);
+        localStorage.setItem("username", JSON.stringify(this.username));
+        localStorage.setItem("email", JSON.stringify(this.email));
+        localStorage.setItem("password", JSON.stringify(this.password));
+        this.productID = parseInt(this.product.split("_")[0]);
+        this.nameID = this.product.split("_")[1];
         localStorage.setItem("productID", JSON.stringify(this.productID));
         localStorage.setItem("nameID", JSON.stringify(this.nameID));
         this.$store.dispatch("login/setId", {
           productID: this.productID,
           nameID: this.nameID,
         });
-        this.$store.dispatch("login/loadItems");
-      } else {
-        Swal.fire({
-          text: this.$t("planError"),
-          icon: "error",
-          confirmButtonText: this.$t("continue"),
-          confirmButtonColor: "red",
+        this.$store.dispatch("login/setItems", {
+          email: this.email,
+          password: this.password,
+          username: this.username,
         });
+
+        this.$store.dispatch("login/checkUsername");
+        this.$store.dispatch("login/checkEmail");
+        if (
+          this.$store.state.login.existUsername == false &&
+          this.$store.state.login.existEmail == false
+        ) {
+          // this.$store.dispatch("login/loadItems");
+        } else if (
+          this.$store.state.login.existUsername == true ||
+          this.$store.state.login.existEmail == true
+        ) {
+          Swal.fire({
+            text: this.$t("existError"),
+            icon: "error",
+            confirmButtonText: this.$t("continue"),
+            confirmButtonColor: "red",
+          });
+        }
       }
     },
     handleInput(event) {

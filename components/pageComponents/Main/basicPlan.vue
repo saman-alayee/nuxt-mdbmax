@@ -46,7 +46,7 @@
                   type="radio"
                   name="exampleRadios"
                   id="exampleRadios1"
-                  value="2-price_1Mrc5sASPJf0SxA0eG87nDko"
+                  value="2-price_1Mrc5sASPJf0SxA0eG87nDko-2.00"
                   v-model="product"
                 />
                 <label class="form-check-label" for="exampleRadios1">
@@ -126,15 +126,34 @@
                 @click="storeData"
               />
 
-              <no-ssr>
-                 <paypal-checkout
-                  amount="2.00"
-                  :button-style="myStyle"
-                  :invoice-number="'P-8NX90009DH167960JMQS47PA'"
-                  :client="paypal"
-                >
-                </paypal-checkout>
-              </no-ssr>
+              
+            </div>
+            <div v-if="factor == true" class="price-container">
+              <div class="d-flex justify-content-between">
+                <p>Total</p>
+                <p>$2.00</p>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <no-ssr>
+                  <paypal-checkout
+                    amount="2.00"
+                    :button-style="myStyle"
+                    :invoice-number="'P-8NX90009DH167960JMQS47PA'"
+                    :client="paypal"
+                  >
+                  </paypal-checkout>
+                </no-ssr>
+                <base-button
+                  class="w-100 px-2"
+                  style="height: 45px"
+                  backgroundColor="var(--yellow)"
+                  textColor="var(--white)"
+                  outline="true"
+                  text="Pay with Stripe"
+                  @click="goStripe"
+                />
+              </div>
             </div>
           </div>
           <div class="d-flex verticalLine" style="width: 60px"></div>
@@ -245,6 +264,9 @@ export default {
   components: { BaseCard, BaseButton },
   data() {
     return {
+      factor: false,
+      paypal_id: "",
+      paypal_price: "",
       product: "",
       productID: "",
       nameID: "",
@@ -286,6 +308,9 @@ export default {
         });
       }
     },
+     goStripe() {
+      this.$store.dispatch("login/loadItems");
+    },
     storeData() {
       if (
         this.username == "" ||
@@ -309,6 +334,9 @@ export default {
           this.errors.push(this.$t("planError"));
         }
       } else {
+        this.factor = true;
+        this.paypal_price = parseInt(this.product.split("_")[2]);
+        this.paypal_id = parseInt(this.product.split("_")[4]);
         localStorage.setItem("username", JSON.stringify(this.username));
         localStorage.setItem("email", JSON.stringify(this.email));
         localStorage.setItem("password", JSON.stringify(this.password));
