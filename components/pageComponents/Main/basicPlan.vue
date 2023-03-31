@@ -127,13 +127,13 @@
               />
 
               <no-ssr>
-                <PayPal
+                 <paypal-checkout
                   amount="2.00"
                   :button-style="myStyle"
                   :invoice-number="'P-8NX90009DH167960JMQS47PA'"
                   :client="paypal"
                 >
-                </PayPal>
+                </paypal-checkout>
               </no-ssr>
             </div>
           </div>
@@ -240,10 +240,9 @@
 import BaseCard from "../../UI/Cards/baseCard.vue";
 import BaseButton from "../../UI/Button/baseButton.vue";
 import Swal from "sweetalert2";
-import PayPal from "vue-paypal-checkout";
 
 export default {
-  components: { BaseCard, BaseButton, PayPal },
+  components: { BaseCard, BaseButton },
   data() {
     return {
       product: "",
