@@ -192,7 +192,7 @@
                   backgroundColor="var(--yellow)"
                   textColor="var(--white)"
                   outline="true"
-                  text="Pay with Stripe"
+                  text="Stripe"
                   @click="goStripe"
                 />
               </div>
@@ -358,6 +358,7 @@ export default {
         }
       } else {
         this.factor = true;
+        this.errors = [];
         this.paypal_price = parseInt(this.product.split("_")[3]);
         this.paypal_id = (this.product.split("_")[4]);
         localStorage.setItem("username", JSON.stringify(this.username));

@@ -150,7 +150,7 @@
                   backgroundColor="var(--yellow)"
                   textColor="var(--white)"
                   outline="true"
-                  text="Pay with Stripe"
+                  text="Stripe"
                   @click="goStripe"
                 />
               </div>
@@ -334,6 +334,7 @@ export default {
           this.errors.push(this.$t("planError"));
         }
       } else {
+        this.errors = [];
         this.factor = true;
         this.paypal_price = parseInt(this.product.split("_")[2]);
         this.paypal_id = parseInt(this.product.split("_")[4]);
@@ -359,7 +360,7 @@ export default {
           this.$store.state.login.existUsername == false &&
           this.$store.state.login.existEmail == false
         ) {
-          this.$store.dispatch("login/loadItems");
+          // this.$store.dispatch("login/loadItems");
         } else if (
           this.$store.state.login.existUsername == true ||
           this.$store.state.login.existEmail == true
