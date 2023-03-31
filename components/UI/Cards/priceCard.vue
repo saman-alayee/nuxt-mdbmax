@@ -24,7 +24,7 @@
             <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
-            <nuxt-link :to="localePath('/Pricing/permiumPlan')">
+            <nuxt-link :to="localePath('/permiumPlan')">
               <BaseButton
                 :text="$t('choose')"
                 backgroundColor="var(--yellow)"
@@ -55,7 +55,7 @@
             <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
-            <nuxt-link :to="localePath(`/Pricing/${link}`)">
+            <nuxt-link :to="localePath(`/${link}`)">
               <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
           </div>
@@ -82,7 +82,7 @@
             <p>{{ feature_seven }}</p>
           </div>
           <div class="btn-container mt-4">
-            <nuxt-link :to="localePath(`/Pricing/${link}`)">
+            <nuxt-link :to="localePath(`/${link}`)">
               <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
           </div>

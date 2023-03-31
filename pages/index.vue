@@ -1,16 +1,13 @@
 <template>
- <div>
-    <TheLogin/> </div>
+  <div>
+    <ThePlans />
+  </div>
 </template>
 
 <script>
-import TheLogin from '../components/pageComponents/Auth/TheLogin.vue';
-
+import ThePlans from "../components/pageComponents/Main/ThePlans.vue";
 export default {
-    components: { TheLogin }
-}
+  name: "IndexPage",
+  components: { ThePlans },
+};
 </script>
-
-<style>
-
-</style>

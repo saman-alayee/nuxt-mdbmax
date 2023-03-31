@@ -2,7 +2,7 @@
   <div>
     <div class="stepper-wrapper mt-4 w-100">
       <div class="stepper-item completed">
-        <nuxt-link :to="localePath('/pricing')"
+        <nuxt-link :to="localePath('/')"
           ><div class="step-counter">1</div></nuxt-link
         >
         <div class="step-name">{{ $t("stepOne") }}</div>

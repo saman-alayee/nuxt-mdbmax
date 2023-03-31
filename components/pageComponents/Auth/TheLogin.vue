@@ -11,7 +11,8 @@
 
     <base-card class="mt-4">
       <template slot="content"
-        ><form class="p-4">
+        >
+        <form class="p-4">
           <h4>{{ $t("account") }}</h4>
           <div class="alert alert-warning mt-4" role="alert">
             {{ $t("trustText_one") }}
@@ -96,7 +97,7 @@ export default {
         if (!/^[^@]+@\w+(\.\w+)+\w$/.test(this.email)) {
           this.errors.push(this.$t("emailError"));
         }
-        if (this.username == "") {
+        if (!/^([a-zA-Z0-9 _-]+)$/.test(this.email)) {
           this.errors.push(this.$t("usernameError"));
         }
         if (this.password.length < 8) {

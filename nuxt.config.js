@@ -3,12 +3,13 @@ export default {
   server: {
     host: '127.0.0.1' // default: localhost
   },
+  ssr:false,
   buildDir: '_nuxt',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mdbmax',
     script: [
-      { src: 'https://js.stripe.com/v3' },
+      { src: 'https://www.paypal.com/sdk/js?client-id=AUH9w8WPfW10a6u1SCZkX8KktgLTQ6mEs-tAc5H8r7mpxH-mfgQsz6XM1h0-u6cKLgNGLuNKsnfPJOmw', },
     ],
     htmlAttrs: {
       lang: 'fa'
@@ -34,7 +35,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/bootstrap-vue', '~/plugins/i18n.js',
+    '@/plugins/bootstrap-vue', '~/plugins/i18n.js', '~/plugins/paypal.js', 
 
   ],
   
@@ -249,6 +250,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath: '_nuxt/dist/'
+    publicPath: '_nuxt/dist/',
+    vendor: ['vue-paypal-checkout']
   }
 }
