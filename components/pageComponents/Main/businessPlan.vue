@@ -177,7 +177,7 @@
               </div>
               <hr />
               <div class="d-flex justify-content-between">
-                <no-ssr>
+                <!-- <no-ssr>
                   <paypal-checkout
                     :amount="paypal_price"
                     :button-style="myStyle"
@@ -185,14 +185,14 @@
                     :client="paypal"
                   >
                   </paypal-checkout>
-                </no-ssr>
+                </no-ssr> -->
                 <base-button
                   class="w-100 px-2"
                   style="height: 45px"
                   backgroundColor="var(--yellow)"
                   textColor="var(--white)"
                   outline="true"
-                  text="Stripe"
+                  text="Stripe Payment"
                   @click="goStripe"
                 />
               </div>
@@ -349,7 +349,7 @@ export default {
         if (!/^[^@]+@\w+(\.\w+)+\w$/.test(this.email)) {
           this.errors.push(this.$t("emailError"));
         }
-        if (!/^([a-zA-Z0-9]+)$/.test(this.email)) {
+        if (!/^([a-zA-Z0-9]+)$/.test(this.username)) {
           this.errors.push(this.$t("usernameError"));
         }
         if (this.password.length < 8) {

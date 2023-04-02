@@ -59,8 +59,12 @@
               <BaseButton :text="$t('choose')" outline="true"
             /></nuxt-link>
           </div>
-          <div class="img-container" style="margin-top:8rem">
-            <img :src="require(`@/assets/images/${image}`)" width="320px" alt="" />
+          <div class="img-container" style="margin-top: 8rem">
+            <img
+              :src="require(`@/assets/images/${image}`)"
+              width="320px"
+              alt=""
+            />
           </div>
         </div>
       </template>
@@ -188,6 +192,11 @@ export default {
     margin-left: 15px;
     width: 20rem;
     margin-top: 0rem;
+  }
+}
+@media (max-width: 968px) {
+  .img-container img {
+    width: 210px;
   }
 }
 </style>
