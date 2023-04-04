@@ -26,6 +26,7 @@
                 v-if="errors.length !== 0"
                 class="alert alert-danger mt-4"
                 role="alert"
+                :dir="$dir()"
               >
                 {{ errors[0] }}
                 <br />
