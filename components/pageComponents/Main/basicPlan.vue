@@ -136,7 +136,7 @@
               </div>
               <hr />
               <div class="d-flex justify-content-between">
-                <no-ssr>
+                <!-- <no-ssr>
                   <paypal-checkout
                     amount="2.00"
                     :button-style="myStyle"
@@ -144,7 +144,7 @@
                     :client="paypal"
                   >
                   </paypal-checkout>
-                </no-ssr>
+                </no-ssr> -->
                 <base-button
                   class="w-100 px-2"
                   style="height: 45px"
